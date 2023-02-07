@@ -5,13 +5,12 @@ export default function Title({ title, size, paddingLeft, paddingTop, textAlign 
         <Text
             style={{
                 fontSize: size,
-                fontWeight: 'bold',
                 paddingLeft: paddingLeft,
                 paddingTop: paddingTop,
                 textAlign: textAlign
             }}
         >
-            {title}
+            {title.toUpperCase()}
         </Text>
     );
 }
