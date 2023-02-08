@@ -1,19 +1,28 @@
-import { StyleSheet} from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { StyleSheet } from 'react-native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SignUp from './src/Components/Screens/CreateAccount/Signup';
 import BottomNavigation from './src/Components/Organisms/BottomNavigation/BottomNavigation';
 import PassCode from './src/Components/Screens/CreateAccount/Passcode';
 import MainPage from './src/Components/Screens/MainPage';
 
+
+const MyTheme = {
+    ...DefaultTheme,
+    colors: {
+        ...DefaultTheme.colors,
+        background: 'White',
+    },
+};
 const Stack = createNativeStackNavigator();
 export default function App() {
     return (
-        <NavigationContainer>
+        <NavigationContainer theme={MyTheme}>
             <Stack.Navigator>
                 <Stack.Screen
                     name='MainPage'
                     component={MainPage}
+                    options={{ headerShown: false }}
                 />
                 <Stack.Screen name='Signup' options={{ headerShown: false }} component={SignUp} />
                 <Stack.Screen

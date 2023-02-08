@@ -3,7 +3,7 @@ import Button from '../../Atoms/Button/Button';
 import TextField from '../../Atoms/TextField/TextField';
 import React from 'react';
 import Label from '../../Atoms/Label/Label';
-// import CheckBox from'react-native-check-box'
+import Checkbox from 'expo-checkbox';
 
 export default function SignUp({ navigation }) {
     const [inputs, setInputs] = React.useState({
@@ -15,7 +15,8 @@ export default function SignUp({ navigation }) {
     const [emailError, setEmailError] = React.useState('');
     const [passwordError, setPasswordError] = React.useState('');
     const [matchPasswordError, setMatchPasswordError] = React.useState('');
-    // const [isSelected, setSelection] = React.useState(false);
+    const [isSelected, setSelection] = React.useState(false);
+    const [privacy, setPrivacy] = React.useState('');
 
     const isValidObjField = (obj) => {
         return Object.values(obj).every((value) => value.trim());
@@ -39,7 +40,7 @@ export default function SignUp({ navigation }) {
     };
     const isValidForm = () => {
         // We accept only all fields have value
-        if (!isValidObjField(inputs)) return updateError('Require all fields', setObjectError);
+        if (!isValidObjField(inputs)) return updateError('All fields required', setObjectError);
         // only valid email id
         if (!isValidEmail(inputs.email)) return updateError('Invalid email', setEmailError);
         // password must have 8 ore more characters
@@ -48,6 +49,12 @@ export default function SignUp({ navigation }) {
         // password and confirm password must be same
         if (inputs.password !== inputs.confirmPassword)
             return updateError('Password does not match', setMatchPasswordError);
+        // checkbox checked
+        if (!isSelected)
+            return updateError(
+                'You must agree to the privacy policy and terms to continue',
+                setPrivacy
+            );
 
         return true;
     };
@@ -66,15 +73,7 @@ export default function SignUp({ navigation }) {
                 backgroundColor='#87CEEB'
                 translucent={true}
             />
-            <View
-                style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    gap: 10,
-                    marginTop: 90,
-                    alignItems: 'center',
-                }}
-            >
+            <View style={styles.textAndPCHealthImage}>
                 <Text>Create a PC Health id</Text>
                 <Image
                     source={require('../../../../assets/PcHealth.png')}
@@ -93,9 +92,22 @@ export default function SignUp({ navigation }) {
             <TextField onChangeText={(text) => changeHandle(text, 'confirmPassword')} />
             {matchPasswordError ? <Text style={styles.error}>{matchPasswordError}</Text> : null}
 
-            {/* <CheckBox
-                value={isSelected}
-            /> */}
+            <View
+                style={styles.privacyPolicy}
+            >
+                <Checkbox
+                    style={styles.checkbox}
+                    value={isSelected}
+                    onValueChange={() => setSelection(!isSelected)}
+                    backgroundColor='white'
+                    color='hsl(240, 25%, 25%)'
+                />
+                <Text style={{ padding: 10 }}>
+                    I agree to Privacy policy and PC Health Terms and Conditions
+                </Text>
+            </View>
+
+            {privacy ? <Text style={styles.error}>{privacy}</Text> : null}
             {objectError ? <Text style={styles.error}>{objectError}</Text> : null}
             <Button
                 title='Create a PCTM-id'
@@ -115,4 +127,18 @@ const styles = StyleSheet.create({
         color: 'red',
         marginLeft: 10,
     },
+    textAndPCHealthImage: {
+        display: 'flex',
+        flexDirection: 'row',
+        gap: 10,
+        marginTop: 90,
+        alignItems: 'center',
+    },
+    privacyPolicy: {
+        display: 'flex',
+        flexDirection: 'row',
+        marginTop: 20,
+        alignItems: 'center',
+        marginLeft: 10,
+    }
 });
