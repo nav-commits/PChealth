@@ -1,23 +1,27 @@
-import { StyleSheet, View } from 'react-native';
-import Home from './src/Components/Screens/Home';
+import { StyleSheet} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Signup from './src/Components/Screens/Signup';
+import SignUp from './src/Components/Screens/CreateAccount/Signup';
 import BottomNavigation from './src/Components/Organisms/BottomNavigation/BottomNavigation';
-import PassCodePage from './src/Components/Screens/Passcode';
+import PassCode from './src/Components/Screens/CreateAccount/Passcode';
+import MainPage from './src/Components/Screens/MainPage';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name='Signup' options={{ headerShown: false }} component={Signup} />
+                <Stack.Screen
+                    name='MainPage'
+                    component={MainPage}
+                />
+                <Stack.Screen name='Signup' options={{ headerShown: false }} component={SignUp} />
                 <Stack.Screen
                     name='BottomNavigation'
                     options={{ headerShown: false }}
                     component={BottomNavigation}
                 />
-                <Stack.Screen name='PassCode' component={PassCodePage} />
+                <Stack.Screen name='PassCode' component={PassCode} />
             </Stack.Navigator>
         </NavigationContainer>
     );

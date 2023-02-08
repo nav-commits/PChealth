@@ -42,9 +42,4 @@ export default function Button({
     );
 }
 
-// const styles = StyleSheet.create({
-//     appButtonText: {
-//         fontSize: 11,
-//         alignSelf: 'center',
-//     },
-// });
+

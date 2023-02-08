@@ -1,6 +1,6 @@
 import { Text} from 'react-native';
 
-export default function Title({ title, size, paddingLeft, paddingTop, textAlign }) {
+export default function Label({ title, size, paddingLeft, paddingTop, textAlign }) {
     return (
         <Text
             style={{

@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native';
-import Button from '../Atoms/Button/Button';
+import Button from '../../Atoms/Button/Button';
 
-export default function PassCodePage({navigation}) {
+export default function PassCode({navigation}) {
     return (
         <View style={{marginTop: 90}}>
             <Text>Passcode</Text>
