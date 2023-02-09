@@ -61,7 +61,7 @@ export default function SignUp({ navigation }) {
     const submitHandler = () => {
         if (isValidForm()) {
             console.log(inputs);
-            navigation.navigate('PassCode');
+            navigation.navigate('Verify your account');
         }
     };
 
@@ -80,21 +80,30 @@ export default function SignUp({ navigation }) {
                     style={{ width: 45, height: 35, borderRadius: 10, marginLeft: 10 }}
                 />
             </View>
-            <Label title='Email' paddingLeft={10} paddingTop={30} size={13} />
-            <TextField onChangeText={(text) => changeHandle(text, 'email')} />
+            <Label title='EMAIL' paddingLeft={10} paddingTop={30} size={13} />
+            <TextField
+                emailError={emailError}
+                onChangeText={(text) => changeHandle(text, 'email')}
+            />
             {emailError ? <Text style={styles.error}>{emailError}</Text> : null}
 
-            <Label title='Password' paddingLeft={10} paddingTop={30} size={13} />
-            <TextField onChangeText={(text) => changeHandle(text, 'password')} />
+            <Label title='PASSWORD' paddingLeft={10} paddingTop={30} size={13} />
+            <TextField
+                passwordError={passwordError}
+                onChangeText={(text) => changeHandle(text, 'password')}
+                password={inputs.password}
+            />
             {passwordError ? <Text style={styles.error}>{passwordError}</Text> : null}
 
-            <Label title='Confirm Password' paddingLeft={10} paddingTop={30} size={13} />
-            <TextField onChangeText={(text) => changeHandle(text, 'confirmPassword')} />
+            <Label title='CONFIRM PASSWORD' paddingLeft={10} paddingTop={30} size={13} />
+            <TextField
+                matchPasswordError={matchPasswordError}
+                onChangeText={(text) => changeHandle(text, 'confirmPassword')}
+                confirmPassword={inputs.confirmPassword}
+            />
             {matchPasswordError ? <Text style={styles.error}>{matchPasswordError}</Text> : null}
 
-            <View
-                style={styles.privacyPolicy}
-            >
+            <View style={styles.privacyPolicy}>
                 <Checkbox
                     style={styles.checkbox}
                     value={isSelected}
@@ -140,5 +149,5 @@ const styles = StyleSheet.create({
         marginTop: 20,
         alignItems: 'center',
         marginLeft: 10,
-    }
+    },
 });

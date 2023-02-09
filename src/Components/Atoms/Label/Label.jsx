@@ -10,7 +10,7 @@ export default function Label({ title, size, paddingLeft, paddingTop, textAlign 
                 textAlign: textAlign
             }}
         >
-            {title.toUpperCase()}
+            {title}
         </Text>
     );
 }

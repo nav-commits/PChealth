@@ -47,8 +47,6 @@ export default function MainPage({ navigation }) {
     );
 }
 
-
-
 const styles = StyleSheet.create({
     textStyle: {
         display: 'flex',

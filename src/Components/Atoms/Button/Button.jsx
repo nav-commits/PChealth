@@ -14,10 +14,12 @@ export default function Button({
     marginTop,
     paddingHorizontal,
     paddingVertical,
-    color
+    color,
+    disable
 }) {
     return (
         <TouchableOpacity
+            disabled={disable}
             onPress={onPress}
             style={{
                 backgroundColor: backgroundColor,

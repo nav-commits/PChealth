@@ -3,7 +3,7 @@ import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SignUp from './src/Components/Screens/CreateAccount/Signup';
 import BottomNavigation from './src/Components/Organisms/BottomNavigation/BottomNavigation';
-import PassCode from './src/Components/Screens/CreateAccount/Passcode';
+import VerifyAccount from './src/Components/Screens/CreateAccount/VerifyAccount';
 import MainPage from './src/Components/Screens/MainPage';
 
 
@@ -30,7 +30,7 @@ export default function App() {
                     options={{ headerShown: false }}
                     component={BottomNavigation}
                 />
-                <Stack.Screen name='PassCode' component={PassCode} />
+                <Stack.Screen name='Verify your account' component={VerifyAccount} />
             </Stack.Navigator>
         </NavigationContainer>
     );
