@@ -15,11 +15,11 @@ export default function Button({
     paddingHorizontal,
     paddingVertical,
     color,
-    disable
+    disabled,
 }) {
     return (
         <TouchableOpacity
-            disabled={disable}
+            disabled={disabled}
             onPress={onPress}
             style={{
                 backgroundColor: backgroundColor,

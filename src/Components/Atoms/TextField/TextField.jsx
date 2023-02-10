@@ -8,6 +8,7 @@ export default function TextField({
     matchPasswordError,
     password,
     confirmPassword,
+    borderRadius
 }) {
     return (
         <TextInput
@@ -20,6 +21,7 @@ export default function TextField({
                 margin: 12,
                 borderWidth: 1,
                 padding: 10,
+                borderRadius: borderRadius
             }}
         />
     );

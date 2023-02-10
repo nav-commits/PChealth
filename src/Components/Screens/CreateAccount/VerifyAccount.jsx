@@ -1,54 +1,48 @@
 import { View, Text, StyleSheet } from 'react-native';
 import Button from '../../Atoms/Button/Button';
-import PhoneInput from 'react-native-phone-number-input';
 import React from 'react';
 import Label from '../../Atoms/Label/Label';
+import TextField from '../../Atoms/TextField/TextField';
 export default function VerifyAccount({ navigation }) {
-    const [phoneNumber, setPhoneNumber] = React.useState('');
-    const phoneInput = React.useRef(null);
+    const [code, setCode] = React.useState('');
     const [disable, setDisabled] = React.useState(true);
-    console.log(phoneNumber)
 
     const onPressHandler = () => {
-        if (phoneNumber.length > 0) {
-            setDisabled(false)
-            navigation.navigate('BottomNavigation')
-        } 
-    }
+        navigation.navigate('BottomNavigation');
+    };
+    const onChangeTextHandler = (text) => {
+        if (text.length === 5) {
+            setDisabled(false);
+        }
+        setCode(text);
+    };
     return (
         <View style={{ marginTop: 20, padding: 20 }}>
-            <Text style={{ color: 'hsl(240, 25%, 25%)', padding: 5, fontSize: 20, fontWeight: 'bold' }}>
-                What's your phone number?
+            <Text
+                style={{
+                    color: 'hsl(240, 25%, 25%)',
+                    padding: 5,
+                    fontSize: 20,
+                    fontWeight: 'bold',
+                }}
+            >
+                Enter your verification code
             </Text>
             <Text style={{ color: 'hsl(240, 25%, 25%)', padding: 5, marginBottom: 40 }}>
-                We need to make sure you only have access to your account.We won't share your number
-                with anyone
+                A verification code has been sent to your phone number
             </Text>
-            <Label title='Phone number' />
-            <PhoneInput
-                ref={phoneInput}
-                defaultValue={phoneNumber}
-                containerStyle={styles.phoneContainer}
-                textContainerStyle={styles.textInput}
-                onChangeFormattedText={text => {
-                    setPhoneNumber(text);
-                }}
-                defaultCode="CA"
-                layout='first'
-                withShadow
-                autoFocus
-            />
-
+            <Label title='5-digit code' paddingLeft={15} />
+            <TextField value={code} onChangeText={onChangeTextHandler} borderRadius={10} />
             <Button
                 onPress={onPressHandler}
-                title='Send verification code'
+                title='Continue'
                 backgroundColor={disable ? 'grey' : 'hsl(240, 25%, 25%)'}
                 color='white'
                 width={'100%'}
-                marginTop={80}
+                marginTop={30}
                 paddingVertical={10}
                 borderRadius={20}
-                disable={disable}
+                disabled={disable}
             />
         </View>
     );
