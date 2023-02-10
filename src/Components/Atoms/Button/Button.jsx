@@ -14,10 +14,12 @@ export default function Button({
     marginTop,
     paddingHorizontal,
     paddingVertical,
-    color
+    color,
+    disabled,
 }) {
     return (
         <TouchableOpacity
+            disabled={disabled}
             onPress={onPress}
             style={{
                 backgroundColor: backgroundColor,
@@ -42,9 +44,4 @@ export default function Button({
     );
 }
 
-// const styles = StyleSheet.create({
-//     appButtonText: {
-//         fontSize: 11,
-//         alignSelf: 'center',
-//     },
-// });
+
