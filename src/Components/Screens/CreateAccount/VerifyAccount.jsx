@@ -1,9 +1,10 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text} from 'react-native';
 import Button from '../../Atoms/Button/Button';
 import React from 'react';
 import Label from '../../Atoms/Label/Label';
 import TextField from '../../Atoms/TextField/TextField';
-export default function VerifyAccount({ navigation }) {
+
+export default function VerifyAccount({ navigation}) {
     const [code, setCode] = React.useState('');
     const [disable, setDisabled] = React.useState(true);
 
@@ -11,11 +12,14 @@ export default function VerifyAccount({ navigation }) {
         navigation.navigate('BottomNavigation');
     };
     const onChangeTextHandler = (text) => {
-        if (text.length === 5) {
+        if (text.length >= 5) {
             setDisabled(false);
+        } else {
+            setDisabled(true);
         }
         setCode(text);
     };
+
     return (
         <View style={{ marginTop: 20, padding: 20 }}>
             <Text
@@ -48,22 +52,4 @@ export default function VerifyAccount({ navigation }) {
     );
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    phoneContainer: {
-        width: '100%',
-        height: 50,
-    },
 
-    textInput: {
-        paddingVertical: 0,
-    },
-    text: {
-        color: 'black',
-        fontWeight: '600',
-    },
-});

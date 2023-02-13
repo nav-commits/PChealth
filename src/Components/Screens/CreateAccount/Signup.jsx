@@ -61,7 +61,7 @@ export default function SignUp({ navigation }) {
     const submitHandler = () => {
         if (isValidForm()) {
             console.log(inputs);
-            navigation.navigate('Verify your account');
+            navigation.navigate('PhoneNumber');
         }
     };
 
