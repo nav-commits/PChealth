@@ -5,6 +5,7 @@ import SignUp from './src/Components/Screens/CreateAccount/Signup';
 import BottomNavigation from './src/Components/Organisms/BottomNavigation/BottomNavigation';
 import VerifyAccount from './src/Components/Screens/CreateAccount/VerifyAccount';
 import MainPage from './src/Components/Screens/MainPage';
+import PhoneNumber from './src/Components/Screens/CreateAccount/PhoneNumber';
 
 
 const MyTheme = {
@@ -30,6 +31,7 @@ export default function App() {
                     options={{ headerShown: false }}
                     component={BottomNavigation}
                 />
+                <Stack.Screen name='PhoneNumber' component={PhoneNumber} />
                 <Stack.Screen name='Verify your account' component={VerifyAccount} />
             </Stack.Navigator>
         </NavigationContainer>
