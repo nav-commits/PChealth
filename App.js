@@ -7,6 +7,7 @@ import VerifyAccount from './src/Components/Screens/CreateAccount/VerifyAccount'
 import MainPage from './src/Components/Screens/MainPage';
 import PhoneNumber from './src/Components/Screens/CreateAccount/PhoneNumber';
 import TellUsAboutYourself from './src/Components/Screens/CreateAccount/TellUsAboutYourself';
+import GenderPage from './src/Components/Screens/CreateAccount/Gender';
 
 const MyTheme = {
     ...DefaultTheme,
@@ -36,6 +37,11 @@ export default function App() {
                     name='TellUsAboutYourself'
                     options={{ headerShown: true }}
                     component={TellUsAboutYourself}
+                />
+                <Stack.Screen
+                    name='GenderPage'
+                    options={{ headerShown: true }}
+                    component={GenderPage}
                 />
                 <Stack.Screen
                     name='BottomNavigation'

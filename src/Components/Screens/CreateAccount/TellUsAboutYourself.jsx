@@ -4,6 +4,7 @@ import TextField from '../../Atoms/TextField/TextField';
 import React, { useState } from 'react';
 import Label from '../../Atoms/Label/Label';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
+import { ProgressBar } from 'react-native-paper';
 
 export default function TellUsAboutYourself({ navigation }) {
     const [inputs, setInputs] = React.useState({
@@ -16,6 +17,7 @@ export default function TellUsAboutYourself({ navigation }) {
     const [firstNameError, setFirstNameError] = React.useState('');
     const [lastNameError, setLastNameError] = React.useState('');
     const [dateError, setDateError] = React.useState('');
+    let progress = 0.33
 
     const changeHandle = (text, input) => {
         setInputs({
@@ -65,18 +67,26 @@ export default function TellUsAboutYourself({ navigation }) {
 
     const submitHandler = () => {
         if (isValidForm()) {
-            navigation.navigate('BottomNavigation');
+           let completedProgressIncrease = progress + 0.33
+            navigation.navigate('GenderPage', {
+                progress: completedProgressIncrease
+            });
         }
     };
 
     return (
-        <View style={{ padding: 20 }}>
+        <View >
+            <View style={{ marginTop: 1 }}>
+                <ProgressBar progress={progress} color={'hsl(240, 25%, 25%)'} visible={true} />
+            </View>
             <Text
                 style={{
                     fontSize: 20,
                     fontWeight: 'bold',
                     color: 'hsl(240, 25%, 25%)',
                     marginBottom: 10,
+                    marginTop: 20,
+                    padding: 10
                 }}
             >
                 Tell us about yourself
@@ -140,6 +150,7 @@ export default function TellUsAboutYourself({ navigation }) {
                 paddingHorizontal={10}
                 paddingVertical={15}
                 borderRadius={20}
+                padding={10}
             />
         </View>
     );
@@ -152,5 +163,6 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         color: 'hsl(240, 25%, 25%)',
+        padding: 10
     },
 });
