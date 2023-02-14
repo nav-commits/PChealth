@@ -6,7 +6,8 @@ import BottomNavigation from './src/Components/Organisms/BottomNavigation/Bottom
 import VerifyAccount from './src/Components/Screens/CreateAccount/VerifyAccount';
 import MainPage from './src/Components/Screens/MainPage';
 import PhoneNumber from './src/Components/Screens/CreateAccount/PhoneNumber';
-
+import TellUsAboutYourself from './src/Components/Screens/CreateAccount/TellUsAboutYourself';
+import GenderPage from './src/Components/Screens/CreateAccount/Gender';
 
 const MyTheme = {
     ...DefaultTheme,
@@ -26,13 +27,27 @@ export default function App() {
                     options={{ headerShown: false }}
                 />
                 <Stack.Screen name='Signup' options={{ headerShown: false }} component={SignUp} />
+                <Stack.Screen name='PhoneNumber' component={PhoneNumber} />
+                <Stack.Screen
+                    name='Verify your account'
+                    options={{ headerShown: true }}
+                    component={VerifyAccount}
+                />
+                <Stack.Screen
+                    name='TellUsAboutYourself'
+                    options={{ headerShown: true }}
+                    component={TellUsAboutYourself}
+                />
+                <Stack.Screen
+                    name='GenderPage'
+                    options={{ headerShown: true }}
+                    component={GenderPage}
+                />
                 <Stack.Screen
                     name='BottomNavigation'
                     options={{ headerShown: false }}
                     component={BottomNavigation}
                 />
-                <Stack.Screen name='PhoneNumber' component={PhoneNumber} />
-                <Stack.Screen name='Verify your account' component={VerifyAccount} />
             </Stack.Navigator>
         </NavigationContainer>
     );

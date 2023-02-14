@@ -9,7 +9,7 @@ export default function VerifyAccount({ navigation}) {
     const [disable, setDisabled] = React.useState(true);
 
     const onPressHandler = () => {
-        navigation.navigate('BottomNavigation');
+        navigation.navigate('TellUsAboutYourself');
     };
     const onChangeTextHandler = (text) => {
         if (text.length >= 5) {
