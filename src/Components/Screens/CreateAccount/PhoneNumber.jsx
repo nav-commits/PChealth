@@ -38,11 +38,10 @@ export default function PhoneNumber({ navigation }) {
         const message = {
             to: expoPushToken,
             sound: 'default',
-            title: 'Original Title',
+            title: 'Code',
             body: `code is 34578`,
             data: { someData: 'goes here' },
         };
-        console.log(message)
 
         await fetch('https://exp.host/--/api/v2/push/send', {
             method: 'POST',
