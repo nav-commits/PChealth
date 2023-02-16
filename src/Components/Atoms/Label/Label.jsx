@@ -1,6 +1,6 @@
 import { Text } from 'react-native';
 
-export default function Label({ title, size, paddingLeft, paddingTop, textAlign, fontWeight, color }) {
+export default function Label({ title, size, paddingLeft, paddingTop, textAlign, fontWeight, color, paddingBottom }) {
     return (
         <Text
             style={{
@@ -9,7 +9,8 @@ export default function Label({ title, size, paddingLeft, paddingTop, textAlign,
                 paddingTop: paddingTop,
                 textAlign: textAlign,
                 fontWeight: fontWeight,
-                color: color
+                color: color,
+                paddingBottom: paddingBottom
             }}
         >
             {title}

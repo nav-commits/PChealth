@@ -68,7 +68,7 @@ export default function TellUsAboutYourself({ navigation }) {
     const submitHandler = () => {
         if (isValidForm()) {
            let completedProgressIncrease = progress + 0.33
-            navigation.navigate('GenderPage', {
+            navigation.navigate('Sex and gender identity', {
                 progress: completedProgressIncrease
             });
         }
