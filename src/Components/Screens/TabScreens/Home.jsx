@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native';
-import Button from '../Atoms/Button/Button';
+import Button from '../../Atoms/Button/Button';
 
 export default function Home() {
     return (

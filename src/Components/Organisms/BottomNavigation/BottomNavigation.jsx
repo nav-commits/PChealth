@@ -1,7 +1,10 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Home from '../../Screens/Home';
-import Journey from '../../Screens/Journey';
+import GetCare from '../../Screens/TabScreens/GetCare';
+import Home from '../../Screens/TabScreens/Home';
+import Journey from '../../Screens/TabScreens/Journey';
+import MyHealth from '../../Screens/TabScreens/MyHealth';
+import Pharmacy from '../../Screens/TabScreens/Pharmacy';
 
 const Tab = createBottomTabNavigator();
 export default function BottomNavigation() {
@@ -10,24 +13,36 @@ export default function BottomNavigation() {
             screenOptions={({ route }) => ({
                 tabBarIcon: ({ focused, color, size }) => {
                     let iconName;
-
-                    if (route.name === 'Home') {
-                        iconName = focused
-                            ? 'ios-information-circle'
-                            : 'ios-information-circle-outline';
-                    } else if (route.name === 'Journey') {
-                        iconName = focused ? 'ios-list' : 'ios-list-outline';
+                    switch (route.name) {
+                        case 'Home':
+                            iconName = focused ? 'home' : 'home-outline';
+                            break;
+                        case 'Journey':
+                            iconName = focused ? 'checkmark-circle' : 'checkmark-circle-outline';
+                            break;
+                        case 'GetCare':
+                            iconName = focused ? 'heart-circle' : 'heart-circle-outline';
+                            break;
+                        case 'Pharmacy':
+                            iconName = focused ? 'bandage' : 'bandage-outline';
+                            break;
+                        case 'MyHealth':
+                            iconName = focused ? 'heart' : 'heart-outline';
+                            break;
+                        default:
+                            break;
                     }
-
-                    // You can return any component that you like here!
                     return <Ionicons name={iconName} size={size} color={color} />;
                 },
-                tabBarActiveTintColor: 'tomato',
-                tabBarInactiveTintColor: 'gray',
+                tabBarActiveTintColor: 'hsl(240, 25%, 25%)',
+                tabBarInactiveTintColor: 'grey',  
             })}
         >
             <Tab.Screen name='Home' options={{ headerShown: false }} component={Home} />
             <Tab.Screen options={{ headerShown: false }} name='Journey' component={Journey} />
+            <Tab.Screen options={{ headerShown: false }} name='GetCare' component={GetCare} />
+            <Tab.Screen options={{ headerShown: false }} name='Pharmacy' component={Pharmacy} />
+            <Tab.Screen options={{ headerShown: false }} name='MyHealth' component={MyHealth} />
         </Tab.Navigator>
     );
 }
