@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import Button from '../../Atoms/Button/Button';
 import React, { useState } from 'react';
 import { ProgressBar } from 'react-native-paper';
@@ -34,7 +34,7 @@ export default function Gender({ navigation, route }) {
     const submitHandler = () => {
         if (isValidForm()) {
             let completedProgressIncrease = progress + 0.33;
-            navigation.navigate('BottomNavigation', {
+            navigation.navigate('Account Created', {
                 progress: completedProgressIncrease,
             });
         }
@@ -72,7 +72,7 @@ export default function Gender({ navigation, route }) {
             <View
                 style={{
                     marginLeft: 10,
-                    width: 200,
+                    width: 190,
                     borderWidth: 1,
                     borderRadius: 10,
                     color: 'hsl(240, 25%, 25%)',
@@ -89,17 +89,21 @@ export default function Gender({ navigation, route }) {
                 </Picker>
             </View>
             {genderError ? <Text style={styles.error}>{genderError}</Text> : null}
-            <Button
-                title='Continue'
-                backgroundColor='hsl(240, 25%, 25%)'
-                width={'100%'}
-                marginTop={20}
-                onPress={submitHandler}
-                paddingHorizontal={10}
-                paddingVertical={15}
-                borderRadius={20}
-                padding={10}
-            />
+            <View style={{ padding: 10 }}>
+                <Button
+                    title='Continue'
+                    backgroundColor='hsl(240, 25%, 25%)'
+                    width={'100%'}
+                    marginTop={20}
+                    onPress={submitHandler}
+                    paddingHorizontal={10}
+                    paddingVertical={15}
+                    borderRadius={20}
+                    padding={10}
+                />
+
+            </View>
+
         </View>
     );
 }
