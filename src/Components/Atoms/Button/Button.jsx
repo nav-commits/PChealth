@@ -16,6 +16,7 @@ export default function Button({
     paddingVertical,
     color,
     disabled,
+    bottomPos
 }) {
     return (
         <TouchableOpacity
@@ -36,6 +37,7 @@ export default function Button({
                 border: border,
                 marginTop: marginTop,
                 color: color,
+                bottom: bottomPos
             }}
         >
                 <Text style={{fontSize: 13, alignSelf: 'center', color:'white', fontWeight:'bold'}}>{title}</Text>

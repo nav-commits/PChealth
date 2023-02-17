@@ -5,15 +5,13 @@ import React, { useState } from 'react';
 import Label from '../../Atoms/Label/Label';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import { ProgressBar } from 'react-native-paper';
+import { useContext } from 'react';
+import { FormsContext } from '../../../Context/FormsContext';
 
 export default function TellUsAboutYourself({ navigation }) {
-    const [inputs, setInputs] = React.useState({
-        firstName: '',
-        lastName: '',
-    });
+    const { inputs, setInputs } = useContext(FormsContext);
     const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
     const [date, setDate] = useState('');
-
     const [firstNameError, setFirstNameError] = React.useState('');
     const [lastNameError, setLastNameError] = React.useState('');
     const [dateError, setDateError] = React.useState('');
