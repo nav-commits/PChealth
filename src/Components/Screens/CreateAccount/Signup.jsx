@@ -126,6 +126,7 @@ export default function SignUp({ navigation }) {
                 onPress={submitHandler}
                 paddingHorizontal={10}
                 paddingVertical={15}
+                color="white"
             />
         </View>
     );

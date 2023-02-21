@@ -1,4 +1,4 @@
-import { Text, TouchableOpacity} from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 
 export default function Button({
     position,
@@ -9,14 +9,15 @@ export default function Button({
     width,
     onPress,
     marginLeft,
-    border,
     borderRadius,
     marginTop,
     paddingHorizontal,
     paddingVertical,
     color,
     disabled,
-    bottomPos
+    bottomPos,
+    borderWidth,
+    borderColor
 }) {
     return (
         <TouchableOpacity
@@ -24,7 +25,6 @@ export default function Button({
             onPress={onPress}
             style={{
                 backgroundColor: backgroundColor,
-                elevation: 8,
                 borderRadius: borderRadius,
                 paddingHorizontal: paddingHorizontal,
                 paddingVertical: paddingVertical,
@@ -34,16 +34,16 @@ export default function Button({
                 top: top,
                 width: width,
                 marginLeft: marginLeft,
-                border: border,
                 marginTop: marginTop,
                 color: color,
-                bottom: bottomPos
+                bottom: bottomPos,
+                borderWidth: borderWidth,
+                borderColor: borderColor
             }}
         >
-                <Text style={{fontSize: 13, alignSelf: 'center', color:'white', fontWeight:'bold'}}>{title}</Text>
-            
+            <Text style={{ fontSize: 13, alignSelf: 'center', color: color, fontWeight: 'bold'}}>
+                {title}
+            </Text>
         </TouchableOpacity>
     );
 }
-
-

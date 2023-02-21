@@ -1,15 +1,17 @@
-import { View, Text, Image, ScrollView } from 'react-native';
+import { View, Text, Image, ScrollView, StyleSheet } from 'react-native';
 import Button from '../../Atoms/Button/Button';
 import { useContext } from 'react';
 import { FormsContext } from '../../../Context/FormsContext';
 import CardContent from '../../Organisms/CardsContent/CardsContent';
-import { data } from '../../../data/data.json'
+import { data } from '../../../data/data.json';
 
 export default function Home() {
     const { inputs } = useContext(FormsContext);
     return (
-
-        <ScrollView showsVerticalScrollIndicator={false} >
+        <ScrollView
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={styles.contentContainer}
+        >
             <View style={{ position: 'relative' }}>
                 <Image
                     resizeMode={'contain'}
@@ -43,6 +45,24 @@ export default function Home() {
             </View>
 
             <CardContent data={data} />
+            <Button
+                title='View All Programs'
+                left={20}
+                backgroundColor='white'
+                color='hsl(240, 25%, 25%)'
+                width={350}
+                paddingHorizontal={10}
+                paddingVertical={10}
+                borderRadius={20}
+                borderWidth={2}
+                borderColor='hsl(240, 25%, 25%)'
+            />
         </ScrollView>
     );
 }
+
+const styles = StyleSheet.create({
+    contentContainer: {
+        paddingVertical: 20,
+    },
+});
