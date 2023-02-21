@@ -149,6 +149,7 @@ export default function TellUsAboutYourself({ navigation }) {
                 paddingVertical={15}
                 borderRadius={20}
                 padding={10}
+                color="white"
             />
         </View>
     );

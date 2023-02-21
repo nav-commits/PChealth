@@ -1,14 +1,17 @@
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, ScrollView, StyleSheet } from 'react-native';
 import Button from '../../Atoms/Button/Button';
 import { useContext } from 'react';
 import { FormsContext } from '../../../Context/FormsContext';
-import Card from '../../Molecules/Card/Card';
+import CardContent from '../../Organisms/CardsContent/CardsContent';
+import { data } from '../../../data/data.json';
 
 export default function Home() {
     const { inputs } = useContext(FormsContext);
     return (
-
-        <View>
+        <ScrollView
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={styles.contentContainer}
+        >
             <View style={{ position: 'relative' }}>
                 <Image
                     resizeMode={'contain'}
@@ -40,12 +43,26 @@ export default function Home() {
                     Health advice and support to help{'\n'}meet your needs.
                 </Text>
             </View>
-            <Card
-                img={
-                    'https://images.ctfassets.net/y9kx4mbdq4n2/6l4vF6zWdtRUDVPDms3xsz/a04420cdb41be20a71c23bd7a8ccca29/Roadrunner_OGImage_EN.jpg'
-                }
-                content={'Skin Care 101: Build your Routine'}
+
+            <CardContent data={data} />
+            <Button
+                title='View All Programs'
+                left={20}
+                backgroundColor='white'
+                color='hsl(240, 25%, 25%)'
+                width={350}
+                paddingHorizontal={10}
+                paddingVertical={10}
+                borderRadius={20}
+                borderWidth={2}
+                borderColor='hsl(240, 25%, 25%)'
             />
-        </View>
+        </ScrollView>
     );
 }
+
+const styles = StyleSheet.create({
+    contentContainer: {
+        paddingVertical: 20,
+    },
+});

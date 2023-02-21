@@ -29,6 +29,7 @@ export default function AccountCreated({ navigation }) {
                     paddingHorizontal={10}
                     paddingVertical={15}
                     borderRadius={20}
+                    color="white"
                 />
             </View>
         </View>

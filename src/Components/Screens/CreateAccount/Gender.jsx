@@ -100,6 +100,7 @@ export default function Gender({ navigation, route }) {
                     paddingVertical={15}
                     borderRadius={20}
                     padding={10}
+                    color="white"
                 />
 
             </View>
