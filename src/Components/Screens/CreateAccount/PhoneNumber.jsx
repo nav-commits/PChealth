@@ -67,8 +67,6 @@ export default function PhoneNumber({ navigation }) {
             return;
         }
         token = (await Notifications.getExpoPushTokenAsync()).data;
-        console.log(token);
-
         return token;
     }
 

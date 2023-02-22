@@ -4,7 +4,8 @@ import { useContext } from 'react';
 import { FormsContext } from '../../../Context/FormsContext';
 import CardContent from '../../Organisms/CardsContent/CardsContent';
 import { data } from '../../../data/data.json';
-
+import SuggestedItemContent from '../../Organisms/SuggestedItemContent/SuggestedItemContent';
+import { suggestedItems } from '../../../Utils/SuggestedItemLabels'
 export default function Home() {
     const { inputs } = useContext(FormsContext);
     return (
@@ -14,7 +15,6 @@ export default function Home() {
         >
             <View style={{ position: 'relative' }}>
                 <Image
-                    resizeMode={'contain'}
                     source={require('../../../../assets/Account.png')}
                     style={{
                         width: 410,
@@ -43,7 +43,7 @@ export default function Home() {
                     Health advice and support to help{'\n'}meet your needs.
                 </Text>
             </View>
-
+            <SuggestedItemContent suggestedItems={suggestedItems} />
             <CardContent data={data} />
             <Button
                 title='View All Programs'
