@@ -1,28 +1,30 @@
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, TouchableWithoutFeedback } from 'react-native';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 
-export default function SuggestedItem({ suggestedItems }) {
+export default function SuggestedItem({ suggestedItems, onPressHandler }) {
     return (
         <View style={{ position: 'relative' }}>
             {suggestedItems.map((label, i) => (
-                <View style={styles.container}>
-                    <View style={styles.innerContainer}>
-                        <View style={styles.img}>
-                            <SimpleLineIcons name='pin' size={15} color='hsl(240, 25%, 25%)' />
+                <TouchableWithoutFeedback onPress={() => onPressHandler(label)}>
+                    <View style={styles.container}>
+                        <View style={styles.innerContainer}>
+                            <View style={styles.img}>
+                                <SimpleLineIcons name='pin' size={15} color='hsl(240, 25%, 25%)' />
+                            </View>
                         </View>
+                        <Text
+                            key={i}
+                            style={{
+                                color: 'hsl(240, 25%, 25%)',
+                                fontWeight: 'bold',
+                                textAlign: 'center',
+                                marginTop: 17,
+                            }}
+                        >
+                            {label}
+                        </Text>
                     </View>
-                    <Text
-                        key={i}
-                        style={{
-                            color: 'hsl(240, 25%, 25%)',
-                            fontWeight: 'bold',
-                            textAlign: 'center',
-                            marginTop: 17,
-                        }}
-                    >
-                        {label}
-                    </Text>
-                </View>
+                </TouchableWithoutFeedback>
             ))}
         </View>
     );
@@ -40,7 +42,7 @@ const styles = StyleSheet.create({
         height: 53,
         marginLeft: 50,
         paddingLeft: 12,
-        marginTop: 5
+        marginTop: 5,
     },
     innerContainer: {
         borderRadius: 5,
