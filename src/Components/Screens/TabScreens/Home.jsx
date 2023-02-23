@@ -1,12 +1,28 @@
-import { View, Text, Image, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, Image, ScrollView, StyleSheet, TouchableWithoutFeedback } from 'react-native';
 import Button from '../../Atoms/Button/Button';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { FormsContext } from '../../../Context/FormsContext';
 import CardContent from '../../Organisms/CardsContent/CardsContent';
 import { data } from '../../../data/data.json';
+import SuggestedItemContent from '../../Organisms/SuggestedItemContent/SuggestedItemContent';
+import { suggestedItems } from '../../../Utils/SuggestedItemLabels';
+import React from 'react';
+import PopupModal from '../../Molecules/PopupModal/PopupModal';
+import Icon from 'react-native-vector-icons/Ionicons';
+import { SuggestedItem } from '../../../data/SuggestedItem.json';
 
 export default function Home() {
     const { inputs } = useContext(FormsContext);
+    const [modalVisible, setModalVisible] = React.useState(false);
+    const [filteredItems, setFilteredItems] = useState([]);
+
+    const onPressHandler = (item) => {
+        if (suggestedItems.includes(item)) {
+            const filterItems = SuggestedItem.filter((data) => data.title === item);
+            setFilteredItems(filterItems);
+        }
+        setModalVisible(true);
+    };
     return (
         <ScrollView
             showsVerticalScrollIndicator={false}
@@ -14,7 +30,6 @@ export default function Home() {
         >
             <View style={{ position: 'relative' }}>
                 <Image
-                    resizeMode={'contain'}
                     source={require('../../../../assets/Account.png')}
                     style={{
                         width: 410,
@@ -44,6 +59,27 @@ export default function Home() {
                 </Text>
             </View>
 
+            <View>
+                <PopupModal
+                    modalVisible={modalVisible}
+                    setModalVisible={setModalVisible}
+                    icon={
+                        <Icon
+                            name={'close'}
+                            size={25}
+                            style={{ paddingTop: 5 }}
+                            onPress={() => {
+                                setModalVisible(!modalVisible);
+                            }}
+                        />
+                    }
+                    info={filteredItems}
+                />
+                <SuggestedItemContent
+                    suggestedItems={suggestedItems}
+                    onPressHandler={onPressHandler}
+                />
+            </View>
             <CardContent data={data} />
             <Button
                 title='View All Programs'
