@@ -9,17 +9,17 @@ import { suggestedItems } from '../../../Utils/SuggestedItemLabels';
 import React from 'react';
 import PopupModal from '../../Molecules/PopupModal/PopupModal';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { SuggestedItem } from '../../../data/SuggestedItem.json';
+import {SuggestedItemData} from '../../../data/SuggestedItem.json'
+import { MainContext } from '../../../Context/MainContext';
 
 export default function Home() {
     const { inputs } = useContext(FormsContext);
-    const [modalVisible, setModalVisible] = React.useState(false);
-    const [filteredItems, setFilteredItems] = useState([]);
+    const { modalVisible, setModalVisible, filteredItems, setFilteredItems } = useContext(MainContext);
 
     const onPressHandler = (item) => {
         if (suggestedItems.includes(item)) {
-            const filterItems = SuggestedItem.filter((data) => data.title === item);
-            setFilteredItems(filterItems);
+            const filterItemsArray = SuggestedItemData.filter((data) => data.title === item);
+            setFilteredItems(filterItemsArray);
         }
         setModalVisible(true);
     };
