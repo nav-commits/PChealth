@@ -2,16 +2,27 @@ import { StyleSheet, StatusBar, Text } from 'react-native';
 import * as React from 'react';
 import { View, useWindowDimensions } from 'react-native';
 import { TabView, TabBar } from 'react-native-tab-view';
-
+import TabContent from '../../Organisms/TabContent/TabContent';
+import SuggestedItem from '../../Molecules/SuggestedItem/SuggestedItem';
+import { suggestedItems } from '../../../Utils/SuggestedItemLabels';
+import { tabs } from '../../../Utils/Tabs';
 
 export default function Journey() {
+    const [index, setIndex] = React.useState(0);
+    const [routes] = React.useState(tabs);
+
+    const onPressHandler = (item) => {
+        console.log(item);
+    };
+
     const renderScene = ({ route }) => {
         switch (route.key) {
             case 'Activities':
                 return (
-                    <View style={{ flex: 1, backgroundColor: 'white' }}>
-                        <Text>Activities</Text>
-                    </View>
+                    <SuggestedItem
+                        suggestedItems={suggestedItems}
+                        onPressHandler={onPressHandler}
+                    />
                 );
             case 'Progress':
                 return (
@@ -23,7 +34,7 @@ export default function Journey() {
                 return null;
         }
     };
-    const renderLabel = ({ route, focused}) => {
+    const renderLabel = ({ route, focused }) => {
         return (
             <View>
                 <Text style={[focused ? styles.activeTabTextColor : styles.tabTextColor]}>
@@ -40,31 +51,21 @@ export default function Journey() {
             renderLabel={renderLabel}
         />
     );
-
-    const layout = useWindowDimensions();
-    const [index, setIndex] = React.useState(0);
-    const [routes] = React.useState([
-        { key: 'Activities', title: 'Activities' },
-        { key: 'Progress', title: 'Progress' },
-    ]);
-    console.log(index);
-
     return (
-        <TabView
-            renderTabBar={renderTabBar}
-            style={styles.container}
-            navigationState={{ index, routes }}
-            renderScene={renderScene}
-            onIndexChange={setIndex}
-            initialLayout={{ width: layout.width }}
-        />
+        <View style={styles.scene}>
+            <TabContent
+                index={index}
+                routes={routes}
+                renderScene={renderScene}
+                renderLabel={renderLabel}
+                renderTabBar={renderTabBar}
+                setIndex={setIndex}
+            />
+        </View>
     );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        marginTop: StatusBar.currentHeight,
-    },
     scene: {
         flex: 1,
     },
