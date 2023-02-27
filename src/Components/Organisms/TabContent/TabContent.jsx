@@ -1,9 +1,9 @@
-import { StyleSheet, StatusBar, Text } from 'react-native';
+import { StyleSheet, StatusBar} from 'react-native';
 import * as React from 'react';
-import { View, useWindowDimensions } from 'react-native';
-import { TabView, TabBar } from 'react-native-tab-view';
+import { useWindowDimensions } from 'react-native';
+import { TabView} from 'react-native-tab-view';
 
-export default function TabContent({ index, routes, renderScene, renderTabBar, setIndex }) {
+export default function TabContent({ index, routes, renderScene, renderTabBar, setIndex, swipeEnabled }) {
     const layout = useWindowDimensions();
     return (
         <TabView
@@ -13,6 +13,7 @@ export default function TabContent({ index, routes, renderScene, renderTabBar, s
             renderScene={renderScene}
             onIndexChange={setIndex}
             initialLayout={{ width: layout.width }}
+            swipeEnabled={swipeEnabled}
         />
     );
 }

@@ -5,7 +5,7 @@ import { TabView, TabBar } from 'react-native-tab-view';
 import TabContent from '../../Organisms/TabContent/TabContent';
 import SuggestedItem from '../../Molecules/SuggestedItem/SuggestedItem';
 import { suggestedItems } from '../../../Utils/SuggestedItemLabels';
-import {SuggestedItemData} from '../../../data/SuggestedItem.json'
+import { SuggestedItemData } from '../../../data/SuggestedItem.json'
 import { tabs } from '../../../Utils/Tabs';
 import { MainContext } from '../../../Context/MainContext';
 import { useContext } from 'react';
@@ -29,7 +29,7 @@ export default function Journey() {
         switch (route.key) {
             case 'Activities':
                 return (
-                    <View>
+                    <View style={{marginTop: 30}}>
                         <PopupModal
                             modalVisible={modalVisible}
                             setModalVisible={setModalVisible}
@@ -76,6 +76,7 @@ export default function Journey() {
             indicatorStyle={{ backgroundColor: 'hsl(240, 25%, 25%)' }}
             style={{ backgroundColor: 'white', paddingTop: 5 }}
             renderLabel={renderLabel}
+
         />
     );
     return (
@@ -87,6 +88,7 @@ export default function Journey() {
                 renderLabel={renderLabel}
                 renderTabBar={renderTabBar}
                 setIndex={setIndex}
+                swipeEnabled={false}
             />
         </View>
     );
