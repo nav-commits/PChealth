@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     tabTextColor: {
-        color: 'hsl(240, 25%, 25%)',
+        color: 'grey',
         fontWeight: 'bold',
     },
 });
