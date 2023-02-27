@@ -35,11 +35,11 @@ export default function BottomNavigation() {
                     return <Ionicons name={iconName} size={size} color={color} />;
                 },
                 tabBarActiveTintColor: 'hsl(240, 25%, 25%)',
-                tabBarInactiveTintColor: 'grey',  
+                tabBarInactiveTintColor: 'grey',
             })}
         >
             <Tab.Screen name='Home' options={{ headerShown: false }} component={Home} />
-            <Tab.Screen options={{ headerShown: false }} name='Journey' component={Journey} />
+            <Tab.Screen name='Journey' component={Journey} />
             <Tab.Screen options={{ headerShown: false }} name='GetCare' component={GetCare} />
             <Tab.Screen options={{ headerShown: false }} name='Pharmacy' component={Pharmacy} />
             <Tab.Screen options={{ headerShown: false }} name='MyHealth' component={MyHealth} />

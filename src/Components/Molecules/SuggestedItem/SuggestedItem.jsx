@@ -5,7 +5,7 @@ export default function SuggestedItem({ suggestedItems, onPressHandler }) {
     return (
         <View style={{ position: 'relative' }}>
             {suggestedItems.map((label, i) => (
-                <TouchableWithoutFeedback onPress={() => onPressHandler(label)}>
+                <TouchableWithoutFeedback onPress={() => onPressHandler(label)} key={i} >
                     <View style={styles.container}>
                         <View style={styles.innerContainer}>
                             <View style={styles.img}>
@@ -13,7 +13,6 @@ export default function SuggestedItem({ suggestedItems, onPressHandler }) {
                             </View>
                         </View>
                         <Text
-                            key={i}
                             style={{
                                 color: 'hsl(240, 25%, 25%)',
                                 fontWeight: 'bold',
