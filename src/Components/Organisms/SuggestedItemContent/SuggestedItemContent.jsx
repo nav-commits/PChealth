@@ -2,7 +2,7 @@ import { View, StyleSheet, Text} from 'react-native';
 import SuggestedItem from '../../Molecules/SuggestedItem/SuggestedItem';
 import Label from '../../Atoms/Label/Label';
 
-export default function SuggestedItemContent({ suggestedItems, onPressHandler }) {
+export default function SuggestedItemContent({ suggestedItems, onPressHandler, SuggestedItemData }) {
     return (
         <View style={styles.container}>
             <Label
@@ -13,7 +13,7 @@ export default function SuggestedItemContent({ suggestedItems, onPressHandler })
                 fontWeight='bold'
                 marginBottom={15}
             />
-            <SuggestedItem suggestedItems={suggestedItems} onPressHandler={onPressHandler} />
+            <SuggestedItem suggestedItems={suggestedItems} onPressHandler={onPressHandler} SuggestedItemData={SuggestedItemData} />
         </View>
     );
 }

@@ -1,11 +1,14 @@
 import { View, StyleSheet, Text, TouchableWithoutFeedback } from 'react-native';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 
-export default function SuggestedItem({ suggestedItems, onPressHandler }) {
+export default function SuggestedItem({ suggestedItems, onPressHandler, SuggestedItemData }) {
     return (
         <View style={{ position: 'relative' }}>
             {suggestedItems.map((label, i) => (
-                <TouchableWithoutFeedback onPress={() => onPressHandler(label)} key={i} >
+                <TouchableWithoutFeedback
+                    onPress={() => onPressHandler(label, suggestedItems, SuggestedItemData)}
+                    key={i}
+                >
                     <View style={styles.container}>
                         <View style={styles.innerContainer}>
                             <View style={styles.img}>
