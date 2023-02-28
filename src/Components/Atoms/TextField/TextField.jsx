@@ -8,12 +8,18 @@ export default function TextField({
     matchPasswordError,
     password,
     confirmPassword,
-    borderRadius
+    borderRadius,
+    editable,
+    selectTextOnFocus,
+    color
+
 }) {
     return (
         <TextInput
             onChangeText={onChangeText}
             value={value}
+            editable={editable}
+            selectTextOnFocus={selectTextOnFocus}
             secureTextEntry={password || confirmPassword ? true : null}
             style={{
                 borderColor: emailError || passwordError || matchPasswordError ? 'red' : null,
@@ -21,7 +27,8 @@ export default function TextField({
                 margin: 12,
                 borderWidth: 1,
                 padding: 10,
-                borderRadius: borderRadius
+                borderRadius: borderRadius,
+                color: color
             }}
         />
     );

@@ -11,7 +11,7 @@ import { MainContext } from '../../../Context/MainContext';
 import { useContext } from 'react';
 import PopupModal from '../../Molecules/PopupModal/PopupModal';
 import Icon from 'react-native-vector-icons/Ionicons';
-import Label from '../../Atoms/Label/Label';
+
 
 export default function Journey() {
     const [index, setIndex] = React.useState(0);
