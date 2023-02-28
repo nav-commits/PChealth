@@ -125,7 +125,7 @@ export default function TellUsAboutYourself({ navigation }) {
                 color={'hsl(240, 25%, 25%)'}
             />
             <TouchableOpacity onPress={showDatePicker}>
-                <TextField value={getDate()} borderRadius={5} />
+                <TextField value={getDate()} borderRadius={5} editable={false} selectTextOnFocus={false} color='black' />
             </TouchableOpacity>
 
             <Text style={styles.textStyle}>You must be at least 16 years old to proceed</Text>

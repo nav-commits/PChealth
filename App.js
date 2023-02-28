@@ -11,6 +11,7 @@ import Gender from './src/Components/Screens/CreateAccount/Gender';
 import AccountCreated from './src/Components/Screens/CreateAccount/AccountCreated';
 import FormsContextProvider from './src/Context/FormsContext';
 import React from 'react';
+import MainContextProvider from './src/Context/MainContext';
 
 const MyTheme = {
     ...DefaultTheme,
@@ -23,46 +24,48 @@ const Stack = createNativeStackNavigator();
 export default function App() {
     return (
         <FormsContextProvider>
-            <NavigationContainer theme={MyTheme}>
-                <Stack.Navigator>
-                    <Stack.Screen
-                        name='MainPage'
-                        component={MainPage}
-                        options={{ headerShown: false }}
-                    />
-                    <Stack.Screen
-                        name='Signup'
-                        options={{ headerShown: false }}
-                        component={SignUp}
-                    />
-                    <Stack.Screen name='PhoneNumber' component={PhoneNumber} />
-                    <Stack.Screen
-                        name='Verify your account'
-                        options={{ headerShown: true }}
-                        component={VerifyAccount}
-                    />
-                    <Stack.Screen
-                        name='TellUsAboutYourself'
-                        options={{ headerShown: true }}
-                        component={TellUsAboutYourself}
-                    />
-                    <Stack.Screen
-                        name='Sex and gender identity'
-                        options={{ headerShown: true }}
-                        component={Gender}
-                    />
-                    <Stack.Screen
-                        name='Account Created'
-                        options={{ headerShown: false }}
-                        component={AccountCreated}
-                    />
-                    <Stack.Screen
-                        name='BottomNavigation'
-                        options={{ headerShown: false }}
-                        component={BottomNavigation}
-                    />
-                </Stack.Navigator>
-            </NavigationContainer>
+            <MainContextProvider>
+                <NavigationContainer theme={MyTheme}>
+                    <Stack.Navigator>
+                        <Stack.Screen
+                            name='MainPage'
+                            component={MainPage}
+                            options={{ headerShown: false }}
+                        />
+                        <Stack.Screen
+                            name='Signup'
+                            options={{ headerShown: false }}
+                            component={SignUp}
+                        />
+                        <Stack.Screen name='PhoneNumber' component={PhoneNumber} />
+                        <Stack.Screen
+                            name='Verify your account'
+                            options={{ headerShown: true }}
+                            component={VerifyAccount}
+                        />
+                        <Stack.Screen
+                            name='TellUsAboutYourself'
+                            options={{ headerShown: true }}
+                            component={TellUsAboutYourself}
+                        />
+                        <Stack.Screen
+                            name='Sex and gender identity'
+                            options={{ headerShown: true }}
+                            component={Gender}
+                        />
+                        <Stack.Screen
+                            name='Account Created'
+                            options={{ headerShown: false }}
+                            component={AccountCreated}
+                        />
+                        <Stack.Screen
+                            name='BottomNavigation'
+                            options={{ headerShown: false }}
+                            component={BottomNavigation}
+                        />
+                    </Stack.Navigator>
+                </NavigationContainer>
+            </MainContextProvider>
         </FormsContextProvider>
     );
 }

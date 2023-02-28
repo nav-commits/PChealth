@@ -32,6 +32,7 @@
     "react-native-form-progress": "^1.0.24",
     "react-native-gesture-handler": "^2.9.0",
     "react-native-modal-datetime-picker": "^14.0.1",
+    "react-native-pager-view": "6.0.1",
     "react-native-paper": "^5.2.0",
     "react-native-phone-number-input": "^2.1.0",
     "react-native-reanimated": "^2.14.4",
