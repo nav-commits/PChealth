@@ -1,4 +1,4 @@
-import { View, Text, Image, ScrollView, StyleSheet, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, Image, ScrollView, StyleSheet} from 'react-native';
 import Button from '../../Atoms/Button/Button';
 import { useContext, useState } from 'react';
 import { FormsContext } from '../../../Context/FormsContext';
@@ -15,8 +15,7 @@ import { MainContext } from '../../../Context/MainContext';
 export default function Home() {
     const { inputs } = useContext(FormsContext);
     const { modalVisible, setModalVisible, filteredItems, setFilteredItems } = useContext(MainContext);
-    console.log(modalVisible)
-
+   
     const onPressHandler = (item) => {
         if (suggestedItems.includes(item)) {
             const filterItemsArray = SuggestedItemData.filter((data) => data.title === item);
@@ -63,7 +62,6 @@ export default function Home() {
             <View>
                 <PopupModal
                     modalVisible={modalVisible}
-                    setModalVisible={setModalVisible}
                     icon={
                         <Icon
                             name={'close'}
@@ -81,7 +79,7 @@ export default function Home() {
                     onPressHandler={onPressHandler}
                 />
             </View>
-            <CardContent data={data} />
+            <CardContent data={data} contain={'contain'} width={280} backgroundColor='#fff' />
             <Button
                 title='View All Programs'
                 left={20}

@@ -1,14 +1,28 @@
 import { View, Text, StyleSheet, Image } from 'react-native';
-export default function Card({ img, content }) {
+export default function Card({ img, content, contain, width, cardContent, backgroundColor,button}) {
     return (
         <View style={{ paddingTop: 25, paddingLeft: 10 }}>
-            <View style={styles.container}>
+            <View
+                style={{
+                    borderRadius: 5,
+                    elevation: 2,
+                    backgroundColor: backgroundColor,
+                    shadowColor: 0.5,
+                    shadowOpacity: 0.3,
+                    shadowRadius: 2,
+                    width: width,
+                    marginBottom: 5,
+                    height: 250,
+                }}
+            >
+                <View>{cardContent}</View>
                 <Image
                     source={{ uri: img }}
-                    resizeMode='contain'
-                    style={{ width: '100%', height: 140, borderRadius: 3 }}
+                    resizeMode={contain}
+                    style={{ width: width, height: 140, borderRadius: 3 }}
                 />
                 <Text style={styles.title}>{content}</Text>
+                <View>{button}</View>
             </View>
         </View>
     );
@@ -19,17 +33,6 @@ const styles = StyleSheet.create({
         fontSize: 13,
         fontWeight: 'bold',
         padding: 5,
-        color: 'hsl(240, 25%, 25%)'
-    },
-    container: {
-        borderRadius: 5,
-        elevation: 2,
-        backgroundColor: '#fff',
-        shadowColor: 0.5,
-        shadowOpacity: 0.3,
-        shadowRadius: 2,
-        width: 280,
-        marginBottom: 5,
-        height: 250
+        color: 'hsl(240, 25%, 25%)',
     },
 });
