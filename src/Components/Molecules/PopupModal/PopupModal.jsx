@@ -3,57 +3,46 @@ import Button from '../../Atoms/Button/Button';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 export default function PopupModal({ modalVisible, icon, info }) {
     return (
-        <View style={styles.centeredView}>
-            <Modal animationType='slide' transparent={true} visible={modalVisible}>
-                <View style={styles.centeredView}>
-                    <View style={styles.modalView}>
-                        {info.map((item, i) => (
-                            <View key={i}>
-                                <View style={styles.contentContainer}>
-                                    <View style={styles.imgDirection}>{icon}</View>
-                                    <Text style={styles.textStyle}>{item.title}</Text>
-                                    <View style={styles.innerContainer}>
-                                        <View style={styles.img}>
-                                            <SimpleLineIcons
-                                                name='pin'
-                                                size={15}
-                                                color='hsl(240, 25%, 25%)'
-                                            />
-                                        </View>
-                                    </View>
-                                </View>
-
-                                <Text style={styles.contentTitleStyle}>
-                                    {item?.content?.contentTitle}
-                                </Text>
-                                <Text style={styles.contentStyle}>
-                                    {item?.content?.mainContent}
-                                </Text>
-                                <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
-                                    <Button
-                                        title='Next'
-                                        backgroundColor='hsl(240, 25%, 25%)'
-                                        color='white'
-                                        width={300}
-                                        paddingHorizontal={10}
-                                        paddingVertical={10}
-                                        borderRadius={20}
-                                        marginTop={50}
+        <Modal animationType='slide' transparent={true} visible={modalVisible}>
+            <View style={styles.modalView}>
+                {info.map((item, i) => (
+                    <View key={i}>
+                        <View style={styles.contentContainer}>
+                            <View style={styles.imgDirection}>{icon}</View>
+                            <Text style={styles.textStyle}>{item.title}</Text>
+                            <View style={styles.innerContainer}>
+                                <View style={styles.img}>
+                                    <SimpleLineIcons
+                                        name='pin'
+                                        size={15}
+                                        color='hsl(240, 25%, 25%)'
                                     />
                                 </View>
                             </View>
-                        ))}
+                        </View>
+
+                        <Text style={styles.contentTitleStyle}>{item?.content?.contentTitle}</Text>
+                        <Text style={styles.contentStyle}>{item?.content?.mainContent}</Text>
+                        <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
+                            <Button
+                                title='Next'
+                                backgroundColor='hsl(240, 25%, 25%)'
+                                color='white'
+                                width={300}
+                                paddingHorizontal={10}
+                                paddingVertical={10}
+                                borderRadius={20}
+                                marginTop={50}
+                            />
+                        </View>
                     </View>
-                </View>
-            </Modal>
-        </View>
+                ))}
+            </View>
+        </Modal>
     );
 }
 
 const styles = StyleSheet.create({
-    centeredView: {
-        flex: 1,
-    },
     modalView: {
         backgroundColor: 'white',
         shadowColor: '#000',
@@ -115,6 +104,6 @@ const styles = StyleSheet.create({
     imgDirection: {
         position: 'absolute',
         top: 8,
-        right:20,
+        right: 20,
     },
 });

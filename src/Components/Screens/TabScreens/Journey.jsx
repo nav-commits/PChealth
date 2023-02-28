@@ -9,14 +9,13 @@ import { SuggestedItemData } from '../../../data/SuggestedItem.json';
 import { tabs } from '../../../Utils/Tabs';
 import { MainContext } from '../../../Context/MainContext';
 import { useContext } from 'react';
-import PopupModal from '../../Molecules/PopupModal/PopupModal';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Label from '../../Atoms/Label/Label';
 
 
 export default function Journey() {
     const [index, setIndex] = React.useState(0);
     const [routes] = React.useState(tabs);
-    const { modalVisible, setModalVisible, filteredItems, setFilteredItems } =
+    const { setModalVisible, setFilteredItems } =
         useContext(MainContext);
 
     const onPressHandler = (item) => {
@@ -32,20 +31,14 @@ export default function Journey() {
             case 'Activities':
                 return (
                     <View style={{ marginTop: 30 }}>
-                        <PopupModal
-                            modalVisible={modalVisible}
-                            setModalVisible={setModalVisible}
-                            icon={
-                                <Icon
-                                    name={'close'}
-                                    size={25}
-                                    style={{ paddingTop: 5 }}
-                                    onPress={() => {
-                                        setModalVisible(!modalVisible);
-                                    }}
-                                />
-                            }
-                            info={filteredItems}
+
+                        <Label
+                            title='SUGGESTED FOR YOU'
+                            paddingLeft={35}
+                            size={12}
+                            marginTop={20}
+                            fontWeight='bold'
+                            marginBottom={15}
                         />
                         <SuggestedItem
                             suggestedItems={suggestedItems}
@@ -104,6 +97,13 @@ export default function Journey() {
     );
     return (
         <View style={styles.scene}>
+            <Label
+                title='Journey'
+                size={15}
+                marginTop={50}
+                fontWeight='bold'
+                textAlign={'center'}
+            />
             <TabContent
                 index={index}
                 routes={routes}
@@ -135,6 +135,6 @@ const styles = StyleSheet.create({
         color: 'hsl(240, 25%, 25%)',
         textAlign: 'center',
         marginTop: 12,
-        
+
     }
 });

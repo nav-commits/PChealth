@@ -39,7 +39,7 @@ export default function BottomNavigation() {
             })}
         >
             <Tab.Screen name='Home' options={{ headerShown: false }} component={Home} />
-            <Tab.Screen name='Journey' component={Journey} />
+            <Tab.Screen name='Journey' options={{ headerShown: false }} component={Journey} />
             <Tab.Screen options={{ headerShown: false }} name='GetCare' component={GetCare} />
             <Tab.Screen options={{ headerShown: false }} name='Pharmacy' component={Pharmacy} />
             <Tab.Screen options={{ headerShown: false }} name='MyHealth' component={MyHealth} />

@@ -15,6 +15,7 @@ import { MainContext } from '../../../Context/MainContext';
 export default function Home() {
     const { inputs } = useContext(FormsContext);
     const { modalVisible, setModalVisible, filteredItems, setFilteredItems } = useContext(MainContext);
+    console.log(modalVisible)
 
     const onPressHandler = (item) => {
         if (suggestedItems.includes(item)) {
