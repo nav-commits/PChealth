@@ -20,7 +20,6 @@ export default function PopupModal({ modalVisible, icon, info }) {
                                 </View>
                             </View>
                         </View>
-
                         <Text style={styles.contentTitleStyle}>{item?.content?.contentTitle}</Text>
                         <Text style={styles.contentStyle}>{item?.content?.mainContent}</Text>
                         <View style={{ flexDirection: 'row', justifyContent: 'center' }}>

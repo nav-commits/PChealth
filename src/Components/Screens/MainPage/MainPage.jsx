@@ -4,7 +4,7 @@ export default function MainPage({ navigation }) {
         <View>
             <Image
                 resizeMode={'contain'}
-                source={require('../../../assets/PcHealth.png')}
+                source={require('../../../../assets/PcHealth.png')}
                 style={{
                     width: 410,
                     height: 290,
@@ -32,9 +32,7 @@ export default function MainPage({ navigation }) {
             <Text style={{ color: 'hsl(240, 25%, 25%)', padding: 20, textAlign: 'center' }}>
                 Use existing Pc id to sign in(the same login you use to access PC Optimum){' '}
             </Text>
-            <View
-                style={styles.textStyle}
-            >
+            <View style={styles.textStyle}>
                 <Text style={{ color: 'hsl(240, 25%, 25%)' }}>don't have an account? </Text>
                 <Text
                     style={{ color: 'hsl(240, 25%, 25%)', fontWeight: 'bold' }}
@@ -53,6 +51,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginTop: 2,
         alignItems: 'center',
-        justifyContent: 'center',  
-    }
+        justifyContent: 'center',
+    },
 });

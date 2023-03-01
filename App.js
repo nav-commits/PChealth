@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SignUp from './src/Components/Screens/CreateAccount/Signup';
 import BottomNavigation from './src/Components/Organisms/BottomNavigation/BottomNavigation';
 import VerifyAccount from './src/Components/Screens/CreateAccount/VerifyAccount';
-import MainPage from './src/Components/Screens/MainPage';
+import MainPage from './src/Components/Screens/MainPage/MainPage';
 import PhoneNumber from './src/Components/Screens/CreateAccount/PhoneNumber';
 import TellUsAboutYourself from './src/Components/Screens/CreateAccount/TellUsAboutYourself';
 import Gender from './src/Components/Screens/CreateAccount/Gender';
@@ -12,6 +12,7 @@ import AccountCreated from './src/Components/Screens/CreateAccount/AccountCreate
 import FormsContextProvider from './src/Context/FormsContext';
 import React from 'react';
 import MainContextProvider from './src/Context/MainContext';
+import BookAppointment from './src/Components/Screens/GetCare/BookAppointment';
 
 const MyTheme = {
     ...DefaultTheme,
@@ -62,6 +63,11 @@ export default function App() {
                             name='BottomNavigation'
                             options={{ headerShown: false }}
                             component={BottomNavigation}
+                        />
+
+                        <Stack.Screen
+                            name='Book an Appointment'
+                            component={BookAppointment}
                         />
                     </Stack.Navigator>
                 </NavigationContainer>

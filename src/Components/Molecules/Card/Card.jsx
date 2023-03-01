@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, Image } from 'react-native';
-export default function Card({ img, content, contain, width, cardContent, backgroundColor,button}) {
+export default function Card({ img, content, contain, width, cardContent, backgroundColor,button, height}) {
     return (
         <View style={{ paddingTop: 25, paddingLeft: 10 }}>
             <View
@@ -12,7 +12,7 @@ export default function Card({ img, content, contain, width, cardContent, backgr
                     shadowRadius: 2,
                     width: width,
                     marginBottom: 5,
-                    height: 250,
+                    height: height,
                 }}
             >
                 <View>{cardContent}</View>
