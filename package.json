@@ -29,6 +29,8 @@
     "react-native-date-picker": "^4.2.8",
     "react-native-datepicker": "^1.7.2",
     "react-native-device-info": "^10.3.0",
+    "react-native-divider": "^1.0.3",
+    "react-native-elements": "^3.4.3",
     "react-native-form-progress": "^1.0.24",
     "react-native-gesture-handler": "^2.9.0",
     "react-native-modal-datetime-picker": "^14.0.1",

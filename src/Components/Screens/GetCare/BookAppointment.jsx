@@ -8,7 +8,7 @@ import ListItemContent from '../../Organisms/ListItemContent/ListItemContent';
 
 export default function BookAppointment({ navigation }) {
     const [modalVisible, setModalVisible] = React.useState(false);
-    const [chosenOption, setChosenOption] = useState('ONTARIO');
+    const [chosenOption, setChosenOption] = useState('ontario');
     const submitHandler = () => {
         setModalVisible(true);
     };

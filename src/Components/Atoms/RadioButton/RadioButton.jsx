@@ -8,25 +8,29 @@ export default function RadioButton({ setChosenOption, chosenOption, optionValue
                 setChosenOption(optionValue);
             }}
         >
-            {chosenOption === optionValue && <View style={styles.selectedRb} />}
+            {chosenOption === optionValue && (
+                <View
+                    style={{
+                        width: 10,
+                        height: 10,
+                        borderRadius: 10,
+                        borderWidth: 5,
+                        borderColor: chosenOption === optionValue ? 'hsl(240, 25%, 25%)' : 'grey',
+                    }}
+                />
+            )}
         </TouchableOpacity>
     );
 }
 const styles = StyleSheet.create({
     radioCircle: {
-        height: 30,
-        width: 30,
+        height: 25,
+        width: 25,
         borderRadius: 100,
         borderWidth: 2,
         borderColor: 'hsl(240, 25%, 25%)',
         alignItems: 'center',
         justifyContent: 'center',
-        marginRight: 20,
-    },
-    selectedRb: {
-        width: 15,
-        height: 15,
-        borderRadius: 50,
-        backgroundColor: 'hsl(240, 25%, 25%)',
+        marginRight: 5,
     },
 });
