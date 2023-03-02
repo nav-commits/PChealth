@@ -1,21 +1,14 @@
-import { View, Text, TouchableOpacity, StyleSheet, Modal } from 'react-native';
-import React, { useState, useContext } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, Modal, ScrollView } from 'react-native';
+import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Button from '../../Atoms/Button/Button';
-import RadioForm from 'react-native-simple-radio-button';
 import Label from '../../Atoms/Label/Label';
+import { provinceOptions } from '../../../Utils/Provinces';
+import ListItemContent from '../../Organisms/ListItemContent/ListItemContent';
 
 export default function BookAppointment({ navigation }) {
     const [modalVisible, setModalVisible] = React.useState(false);
-    const [chosenOption, setChosenOption] = useState('ONTARIO'); //will store our current user options
-    const options = [
-        { label: 'ONTARIO', value: 'ONTARIO' },
-        { label: 'Samsung', value: 'samsung' },
-        { label: 'Apple', value: 'apple' },
-        { label: 'Samsung', value: 'samsung' },
-        { label: 'Apple', value: 'apple' },
-        { label: 'Samsung', value: 'samsung' },
-    ];
+    const [chosenOption, setChosenOption] = useState('ONTARIO');
     const submitHandler = () => {
         setModalVisible(true);
     };
@@ -27,7 +20,6 @@ export default function BookAppointment({ navigation }) {
                 transparent={true}
                 visible={modalVisible}
                 onRequestClose={() => {
-                    Alert.alert('Modal has been closed.');
                     setModalVisible(!modalVisible);
                 }}
             >
@@ -39,17 +31,10 @@ export default function BookAppointment({ navigation }) {
                         fontWeight='bold'
                         textAlign={'center'}
                     />
-                    <RadioForm
-                        radio_props={options}
-                        initial={0}
-                        onPress={(value) => {
-                            setChosenOption(value);
-                        }}
-                        style={{marginTop: 30, padding: 10 }}
-                        labelColor='hsl(240, 25%, 25%)'
-                        selectedButtonColor='hsl(240, 25%, 25%)'
-                        selectedLabelColor='hsl(240, 25%, 25%)'
-                        buttonColor='hsl(240, 25%, 25%)'
+                    <ListItemContent
+                        data={provinceOptions}
+                        setChosenOption={setChosenOption}
+                        chosenOption={chosenOption}
                     />
                     <Button
                         title={'Save'}
@@ -62,16 +47,16 @@ export default function BookAppointment({ navigation }) {
                         borderWidth={2}
                         borderColor='hsl(240, 25%, 25%)'
                         marginTop={40}
+                        marginLeft={40}
                         onPress={() => setModalVisible(!modalVisible)}
                     />
                 </View>
             </Modal>
             <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
                 <Button
-                    title={chosenOption}
+                    title={chosenOption.toUpperCase()}
                     backgroundColor='white'
                     color='hsl(240, 25%, 25%)'
-                    width={120}
                     paddingHorizontal={10}
                     paddingVertical={10}
                     borderRadius={20}
@@ -92,5 +77,6 @@ const styles = StyleSheet.create({
         shadowColor: '#000',
         height: '100%',
         width: '100%',
+        padding: 10,
     },
 });
