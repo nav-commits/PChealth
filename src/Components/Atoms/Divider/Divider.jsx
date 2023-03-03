@@ -1,6 +1,6 @@
 import { Text } from 'react-native';
 
-export default function Divider({ backgroundColor, position, bottom, width, height }) {
+export default function Divider({ backgroundColor, position, bottom, width, height, }) {
     return (
         <Text
             style={{

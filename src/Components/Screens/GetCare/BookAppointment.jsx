@@ -6,6 +6,7 @@ import Label from '../../Atoms/Label/Label';
 import { provinceOptions } from '../../../Utils/Provinces';
 import ListItemContent from '../../Organisms/ListItemContent/ListItemContent';
 import { serviceData } from '../../../data/Service.json';
+import ServiceTypeContent from '../../Organisms/ServiceTypeContent/ServiceTypeContent';
 
 export default function BookAppointment({ navigation }) {
     const [modalVisible, setModalVisible] = React.useState(false);
@@ -15,12 +16,14 @@ export default function BookAppointment({ navigation }) {
         setModalVisible(true);
     };
     const filterByProvince = (province) => {
-        if (serviceData.includes(province.location)) {
+        if (provinceOptions.find((item) => item.value === province)) {
             const filterItemsArray = serviceData.filter((data) => data.location === province);
             setFilterData(filterItemsArray);
         }
     };
-    console.log(filterData);
+    const onPress = () => {
+        navigation.navigate('ServiceTypeDetail');
+    };
     return (
         <View>
             <Modal
@@ -80,16 +83,7 @@ export default function BookAppointment({ navigation }) {
                 Select a specialist to view available on-demand, virtual, {'\n'} and in-person
                 appointments.Offerings are based on location
             </Text>
-            <View>
-                {filterData.map((option) => {
-                    return (
-                        <View key={option.id}>
-                            <Text>{option.popular}</Text>
-                            <Text>{option.location}</Text>
-                        </View>
-                    );
-                })}
-            </View>
+            <ServiceTypeContent filterData={filterData} />
         </View>
     );
 }

@@ -13,6 +13,7 @@ import FormsContextProvider from './src/Context/FormsContext';
 import React from 'react';
 import MainContextProvider from './src/Context/MainContext';
 import BookAppointment from './src/Components/Screens/GetCare/BookAppointment';
+import ServiceTypeDetail from './src/Components/Screens/GetCare/ServiceTypeDetail';
 
 const MyTheme = {
     ...DefaultTheme,
@@ -65,10 +66,9 @@ export default function App() {
                             component={BottomNavigation}
                         />
 
-                        <Stack.Screen
-                            name='Book an Appointment'
-                            component={BookAppointment}
-                        />
+                        <Stack.Screen name='Book an Appointment' component={BookAppointment} />
+
+                        <Stack.Screen name='ServiceTypeDetail' component={ServiceTypeDetail} />
                     </Stack.Navigator>
                 </NavigationContainer>
             </MainContextProvider>

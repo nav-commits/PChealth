@@ -6,8 +6,8 @@
             "popular": "Popular",
             "PopularServices": [
                 {
-                    "Image": "https://polyesterstudio.com/wp-content/uploads/2020/08/5-01-768x768.jpg",
                     "title": "Massage Therapy",
+                    "Image": "https://polyesterstudio.com/wp-content/uploads/2020/08/5-01-768x768.jpg",
                     "therapyDetails": {
                         "therapyTitle": "Massage Therapy",
                         "description": "Looking to relive muscle tension and pain? Whether in a recent injury or recurring pain from headaches, back pain or arthritis",
@@ -93,20 +93,22 @@
                     }
                 },
                 { "title": "Mental Health Counseling" },
-                { "title": "Nutrition and Food Advice" }
+                { "title": "Nutrition and Food Advice" },
+                { "title": "Physiotherapy" }
             ],
             "moreCareService": "More care services",
             "moreCareServices": [{ "title": "Acupuncture" }, { "title": "Brain Health Assessment" }]
         },
         {
             "id": 2,
-            "location": "British Columbia",
-            "popular": "Popular"
-        },
-        {
-            "id": 3,
-            "location": "Manitoba",
-            "popular": "Popular"
+            "location": "Northwest Territories",
+            "popular": "Popular",
+            "PopularServices": [
+                { "title": "Mental Health Counseling" },
+                { "title": "Nutrition and Food Advice" }
+            ],
+            "moreCareService": "More care services",
+            "moreCareServices": [{ "title": "Acupuncture" }, { "title": "Brain Health Assessment" }]
         }
     ]
 }
