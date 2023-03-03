@@ -92,9 +92,142 @@
                         ]
                     }
                 },
-                { "title": "Mental Health Counseling" },
-                { "title": "Nutrition and Food Advice" },
-                { "title": "Physiotherapy" }
+                {
+                    "title": "Mental Health Counseling",
+                    "Image": "https://polyesterstudio.com/wp-content/uploads/2020/08/5-01-768x768.jpg",
+                    "therapyDetails": {
+                        "therapyTitle": "Mental Health Counseling",
+                        "description": "Connect  with a mental health therapist in 12 hours or less. Our therapists can help you with stress, anxiety, depression, grief and more",
+                        "booking": "Book for later",
+                        "type": "Virtual",
+                        "priceDetail": "Price Varies",
+                        "appointmentDetails": "Book an appointment to talk with someone at a location near your",
+                        "bookingType": [
+                            {
+                                "title": "Meet now",
+                                "type": "Virtual",
+                                "appointmentDetails": "Talk with some online as soon as possible",
+                                "attendingPerson": "Myself",
+                                "serviceDetails": {
+                                    "title": "Mental Health Counseling",
+                                    "time": 50,
+                                    "cost": 120.0,
+                                    "type": "Virtual"
+                                }
+                            },
+                            {
+                                "title": "Book for later",
+                                "type": "Virtual",
+                                "appointmentDetails": "Book an appointment to talk with someone online",
+                                "attendingPerson": "Myself",
+                                "serviceDetails": {
+                                    "title": "Mental Health Counseling",
+                                    "time": 50,
+                                    "cost": 120.0,
+                                    "type": "Virtual",
+                                    "clinician": [
+                                        {
+                                            "profession": "MSW/RSW",
+                                            "name": "Cassandra Brade",
+                                            "time": "Tomorrow, 9:00 am EST"
+                                        },
+                                        {
+                                            "profession": "MSW, RSW",
+                                            "name": "Melanie Abbott",
+                                            "time": "Tomorrow, 10:00  am EST"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Physiotherapy",
+                    "Image": "https://polyesterstudio.com/wp-content/uploads/2020/08/5-01-768x768.jpg",
+                    "therapyDetails": {
+                        "therapyTitle": "Physiotherapy",
+                        "description": "Looking to relive muscle tension and pain? Whether in a recent injury or recurring pain from headaches, back pain or arthritis",
+                        "booking": "Book for later",
+                        "type": "In-person",
+                        "priceDetail": "Price Varies",
+                        "appointmentDetails": "Book an appointment to talk with someone at a location near your",
+                        "locationDetails": [
+                            {
+                                "name": "pt Health-North Brampton",
+                                "address": "36 vodden st, stuite 306",
+                                "distance": 4.1,
+                                "serviceDetails": [
+                                    {
+                                        "title": "Physiotherapy Initial Assessment",
+                                        "time": 60,
+                                        "cost": 100.0,
+                                        "clinician": [
+                                            {
+                                                "profession": "Physiotherapy",
+                                                "name": "Elizabeth Abraham",
+                                                "time": "March 7, 9:00 am EST"
+                                            },
+                                            {
+                                                "profession": "Physiotherapy",
+                                                "name": "Amandeep Sahota",
+                                                "time": "March 8, 11: 45 am EST"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Physiotherapy Follow-up Treatment",
+                                        "time": 39,
+                                        "cost": 85.0,
+                                        "clinician": [
+                                            {
+                                                "profession": "Physiotherapy",
+                                                "name": "Elizabeth Abraham",
+                                                "time": "March 7, 9:00 am EST"
+                                            },
+                                            {
+                                                "profession": "Physiotherapy",
+                                                "name": "Amandeep Sahota",
+                                                "time": "March 8, 11: 45 am EST"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "The Sports Medicine Specialists",
+                                "address": "247 McMurchy Ave. S",
+                                "distance": 6.6,
+                                "serviceDetails": [
+                                    {
+                                        "title": "Message Therapy",
+                                        "time": 30,
+                                        "cost": 70.0,
+                                        "clinician": [
+                                            {
+                                                "profession": "Message Therapy",
+                                                "name": "Conor McIntrye",
+                                                "time": "tomorrow, 3:30pm am EST"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Message Therapy",
+                                        "time": 60,
+                                        "cost": 105.0,
+                                        "clinician": [
+                                            {
+                                                "profession": "Message Therapy",
+                                                "name": "Conor McIntrye",
+                                                "time": "tomorrow, 3:30pm am EST"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
             ],
             "moreCareService": "More care services",
             "moreCareServices": [{ "title": "Acupuncture" }, { "title": "Brain Health Assessment" }]

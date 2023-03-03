@@ -13,3 +13,16 @@ export const provinceOptions = [
     { label: 'Saskatchewan', value: 'Saskatchewan' },
     { label: 'Yukon', value: 'Yukon' },
 ];
+
+//  needed this code for 2nd object after done first
+//  {
+//             "id": 2,
+//             "location": "Northwest Territories",
+//             "popular": "Popular",
+//             "PopularServices": [
+//                 { "title": "Mental Health Counseling" },
+//                 { "title": "Nutrition and Food Advice" }
+//             ],
+//             "moreCareService": "More care services",
+//             "moreCareServices": [{ "title": "Acupuncture" }, { "title": "Brain Health Assessment" }]
+//         }

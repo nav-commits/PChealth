@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, StyleSheet, Modal, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Modal, } from 'react-native';
 import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Button from '../../Atoms/Button/Button';
@@ -11,7 +11,8 @@ import ServiceTypeContent from '../../Organisms/ServiceTypeContent/ServiceTypeCo
 export default function BookAppointment({ navigation }) {
     const [modalVisible, setModalVisible] = React.useState(false);
     const [chosenOption, setChosenOption] = useState('Ontario');
-    const [filterData, setFilterData] = useState([]);
+    const [filterData, setFilterData] = useState([serviceData[0]]);
+
     const submitHandler = () => {
         setModalVisible(true);
     };
