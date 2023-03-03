@@ -22,9 +22,15 @@ export default function BookAppointment({ navigation }) {
             setFilterData(filterItemsArray);
         }
     };
-    const onPress = () => {
+    
+ 
+    const onPress = (title) => {
+        let servicesData = serviceData.map((data) => {
+            let filteredService = data.PopularServices.find((service) => service.title === title)
+            return filteredService;
+        })
         navigation.navigate('ServiceTypeDetail', {
-            serviceType: filterData
+            serviceType: servicesData
         });
     };
     return (

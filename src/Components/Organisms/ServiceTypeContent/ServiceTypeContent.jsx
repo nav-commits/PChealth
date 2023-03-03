@@ -13,7 +13,7 @@ export default function ServiceTypeContent({ filterData, onPress }) {
                         {option.PopularServices.map((item) => {
                             return (
                                 <View style={styles.parentContainer} key={item?.id}>
-                                    <TouchableOpacity onPress={onPress}>
+                                    <TouchableOpacity onPress={() => onPress(item?.title)}>
                                         <View style={styles.childContainer}>
                                             <Text style={styles.labelTitle}>{item?.title}</Text>
                                             <SimpleLineIcons
@@ -33,7 +33,7 @@ export default function ServiceTypeContent({ filterData, onPress }) {
                         {option.moreCareServices.map((item) => {
                             return (
                                 <View style={styles.parentContainer} key={item?.id}>
-                                    <TouchableOpacity onPress={onPress}>
+                                    <TouchableOpacity onPress={() => onPress(item?.title)}>
                                         <View style={styles.childContainer}>
                                             <Text style={styles.labelTitle}>{item?.title}</Text>
                                             <SimpleLineIcons

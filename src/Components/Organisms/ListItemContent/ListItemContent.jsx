@@ -8,8 +8,8 @@ export default function ListItemContent({ data, setChosenOption, chosenOption, f
         <ScrollView showsVerticalScrollIndicator={false}>
             {data.map((option,idx) => {
                 return (
-                    <View>
-                        <View key={idx} style={styles.container}>
+                    <View key={idx}>
+                        <View style={styles.container}>
                             <Text style={styles.radioText}>{option.value}</Text>
                             <RadioButton
                                 setChosenOption={setChosenOption}
