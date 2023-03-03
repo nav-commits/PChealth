@@ -9,12 +9,12 @@
                     "Image": "https://polyesterstudio.com/wp-content/uploads/2020/08/5-01-768x768.jpg",
                     "title": "Massage Therapy",
                     "therapyDetails": {
-                        "therapytitle": "Massage Therapy",
+                        "therapyTitle": "Massage Therapy",
                         "description": "Looking to relive muscle tension and pain? Whether in a recent injury or recurring pain from headaches, back pain or arthritis",
                         "booking": "Book for later",
                         "type": "In-person",
                         "priceDetail": "Price Varies",
-                        "apotimentDetails": "Book an appointment to talk with someone at a location near your",
+                        "appointmentDetails": "Book an appointment to talk with someone at a location near your",
                         "locationDetails": [
                             {
                                 "name": "pt Health-North Brampton",
@@ -25,7 +25,7 @@
                                         "title": "Message Therapy",
                                         "time": 30,
                                         "cost": 70.0,
-                                        "clicican": [
+                                        "clinician": [
                                             {
                                                 "profession": "Message Therapy",
                                                 "name": "Oleg Sharovatov",
@@ -37,7 +37,7 @@
                                         "title": "Message Therapy",
                                         "time": 45,
                                         "cost": 82.5,
-                                        "clicican": [
+                                        "clinician": [
                                             {
                                                 "profession": "Message Therapy",
                                                 "name": "Oleg Sharovatov",
@@ -49,7 +49,7 @@
                                         "title": "Message Therapy",
                                         "time": 60,
                                         "cost": 70.0,
-                                        "clicican": [
+                                        "clinician": [
                                             {
                                                 "name": "Oleg Sharovatov",
                                                 "time": "March 7, 9:00 am EST"
@@ -67,7 +67,7 @@
                                         "title": "Message Therapy",
                                         "time": 30,
                                         "cost": 70.0,
-                                        "clicican": [
+                                        "clinician": [
                                             {
                                                 "profession": "Message Therapy",
                                                 "name": "Conor McIntrye",
@@ -79,7 +79,7 @@
                                         "title": "Message Therapy",
                                         "time": 60,
                                         "cost": 105.0,
-                                        "clicican": [
+                                        "clinician": [
                                             {
                                                 "profession": "Message Therapy",
                                                 "name": "Conor McIntrye",
@@ -96,7 +96,7 @@
                 { "title": "Nutrition and Food Advice" }
             ],
             "moreCareService": "More care services",
-            "moreCareServices": [{ "title": "Acupunture" }, { "title": "Brain Health Assesment" }]
+            "moreCareServices": [{ "title": "Acupuncture" }, { "title": "Brain Health Assessment" }]
         },
         {
             "id": 2,
