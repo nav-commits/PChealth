@@ -22,7 +22,9 @@ export default function BookAppointment({ navigation }) {
         }
     };
     const onPress = () => {
-        navigation.navigate('ServiceTypeDetail');
+        navigation.navigate('ServiceTypeDetail', {
+            serviceType: filterData
+        });
     };
     return (
         <View>
@@ -83,7 +85,7 @@ export default function BookAppointment({ navigation }) {
                 Select a specialist to view available on-demand, virtual, {'\n'} and in-person
                 appointments.Offerings are based on location
             </Text>
-            <ServiceTypeContent filterData={filterData} />
+            <ServiceTypeContent filterData={filterData} onPress={onPress} />
         </View>
     );
 }

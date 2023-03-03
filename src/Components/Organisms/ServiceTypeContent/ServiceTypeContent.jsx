@@ -1,59 +1,49 @@
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import React, { useState } from 'react';
 import Divider from '../../Atoms/Divider/Divider';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 
-export default function ServiceTypeContent({ filterData }) {
+export default function ServiceTypeContent({ filterData, onPress }) {
     return (
         <View>
             {filterData.map((option) => {
                 return (
                     <View key={option.id}>
-                        <Text
-                            style={{
-                                fontSize: 17,
-                                fontWeight: 'bold',
-                                color: 'hsl(240, 25%, 25%)',
-                                paddingLeft: 10,
-                            }}
-                        >
-                            {option.popular}
-                        </Text>
+                        <Text style={styles.title}>{option.popular}</Text>
                         {option.PopularServices.map((item) => {
                             return (
-                                <View style={{ padding: 12 }} key={item?.id}>
-                                    <Text
-                                        style={{
-                                            fontWeight: 'bold',
-                                            color: 'hsl(240, 25%, 25%)',
-                                        }}
-                                    >
-                                        {item?.title}
-                                    </Text>
+                                <View style={styles.parentContainer} key={item?.id}>
+                                    <TouchableOpacity onPress={onPress}>
+                                        <View style={styles.childContainer}>
+                                            <Text style={styles.labelTitle}>{item?.title}</Text>
+                                            <SimpleLineIcons
+                                                name='arrow-right'
+                                                size={13}
+                                                color='hsl(240, 25%, 25%)'
+                                            />
+                                        </View>
+                                    </TouchableOpacity>
+
                                     <Divider backgroundColor='grey' width='100%' height={0.5} />
                                 </View>
                             );
                         })}
-                        <Text
-                            style={{
-                                fontSize: 17,
-                                fontWeight: 'bold',
-                                color: 'hsl(240, 25%, 25%)',
-                                paddingLeft: 10,
-                            }}
-                        >
-                            {option.moreCareService}
-                        </Text>
+
+                        <Text style={styles.title}>{option.moreCareService}</Text>
                         {option.moreCareServices.map((item) => {
                             return (
-                                <View style={{ padding: 12 }} key={item?.id}>
-                                    <Text
-                                        style={{
-                                            fontWeight: 'bold',
-                                            color: 'hsl(240, 25%, 25%)',
-                                        }}
-                                    >
-                                        {item?.title}
-                                    </Text>
+                                <View style={styles.parentContainer} key={item?.id}>
+                                    <TouchableOpacity onPress={onPress}>
+                                        <View style={styles.childContainer}>
+                                            <Text style={styles.labelTitle}>{item?.title}</Text>
+                                            <SimpleLineIcons
+                                                name='arrow-right'
+                                                size={13}
+                                                color='hsl(240, 25%, 25%)'
+                                            />
+                                        </View>
+                                    </TouchableOpacity>
+
                                     <Divider backgroundColor='grey' width='100%' height={0.5} />
                                 </View>
                             );
@@ -64,3 +54,26 @@ export default function ServiceTypeContent({ filterData }) {
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    title: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: 'hsl(240, 25%, 25%)',
+        paddingLeft: 10,
+        marginTop: 12,
+    },
+    labelTitle: {
+        fontWeight: 'bold',
+        color: 'hsl(240, 25%, 25%)',
+        paddingBottom: 8,
+    },
+    childContainer: {
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    parentContainer: {
+        padding: 12,
+    },
+});

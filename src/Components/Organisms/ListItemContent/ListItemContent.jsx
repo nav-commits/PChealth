@@ -6,10 +6,10 @@ import Divider from '../../Atoms/Divider/Divider';
 export default function ListItemContent({ data, setChosenOption, chosenOption, filterByProvince }) {
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
-            {data.map((option) => {
+            {data.map((option,idx) => {
                 return (
-                    <View key={option.label}>
-                        <View  style={styles.container}>
+                    <View>
+                        <View key={idx} style={styles.container}>
                             <Text style={styles.radioText}>{option.value}</Text>
                             <RadioButton
                                 setChosenOption={setChosenOption}
