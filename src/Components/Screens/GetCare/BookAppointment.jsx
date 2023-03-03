@@ -5,14 +5,22 @@ import Button from '../../Atoms/Button/Button';
 import Label from '../../Atoms/Label/Label';
 import { provinceOptions } from '../../../Utils/Provinces';
 import ListItemContent from '../../Organisms/ListItemContent/ListItemContent';
+import { serviceData } from '../../../data/Service.json';
 
 export default function BookAppointment({ navigation }) {
     const [modalVisible, setModalVisible] = React.useState(false);
-    const [chosenOption, setChosenOption] = useState('ontario');
+    const [chosenOption, setChosenOption] = useState('Ontario');
+    const [filterData, setFilterData] = useState([]);
     const submitHandler = () => {
         setModalVisible(true);
     };
-
+    const filterByProvince = (province) => {
+        if (serviceData.includes(province.location)) {
+            const filterItemsArray = serviceData.filter((data) => data.location === province);
+            setFilterData(filterItemsArray);
+        }
+    };
+    console.log(filterData);
     return (
         <View>
             <Modal
@@ -35,6 +43,7 @@ export default function BookAppointment({ navigation }) {
                         data={provinceOptions}
                         setChosenOption={setChosenOption}
                         chosenOption={chosenOption}
+                        filterByProvince={filterByProvince}
                     />
                     <Button
                         title={'Save'}
@@ -62,10 +71,24 @@ export default function BookAppointment({ navigation }) {
                     borderRadius={20}
                     borderWidth={2}
                     borderColor='hsl(240, 25%, 25%)'
-                    marginTop={40}
+                    marginTop={30}
                     Icon={<Icon name={'location-sharp'} size={14} color={'hsl(240, 25%, 25%)'} />}
                     onPress={submitHandler}
                 />
+            </View>
+            <Text style={styles.locationText}>
+                Select a specialist to view available on-demand, virtual, {'\n'} and in-person
+                appointments.Offerings are based on location
+            </Text>
+            <View>
+                {filterData.map((option) => {
+                    return (
+                        <View key={option.id}>
+                            <Text>{option.popular}</Text>
+                            <Text>{option.location}</Text>
+                        </View>
+                    );
+                })}
             </View>
         </View>
     );
@@ -78,5 +101,12 @@ const styles = StyleSheet.create({
         height: '100%',
         width: '100%',
         padding: 10,
+    },
+    locationText: {
+        textAlign: 'center',
+        marginTop: 20,
+        paddingLeft: 40,
+        paddingRight: 40,
+        fontSize: 12.5,
     },
 });

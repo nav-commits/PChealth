@@ -1,11 +1,12 @@
 import { View, TouchableOpacity, StyleSheet } from 'react-native';
 
-export default function RadioButton({ setChosenOption, chosenOption, optionValue }) {
+export default function RadioButton({ setChosenOption, chosenOption, optionValue, filterByProvince }) {
     return (
         <TouchableOpacity
             style={styles.radioCircle}
             onPress={() => {
                 setChosenOption(optionValue);
+                filterByProvince(optionValue)
             }}
         >
             {chosenOption === optionValue && (

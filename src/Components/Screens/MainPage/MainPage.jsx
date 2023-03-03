@@ -21,7 +21,7 @@ export default function MainPage({ navigation }) {
                     marginTop: 50,
                 }}
             >
-                Welcome to the Pc Health App
+                Popular to the Pc Health App
             </Text>
             <Text style={{ color: 'hsl(240, 25%, 25%)', padding: 5, textAlign: 'center' }}>
                 Get Care. Get Healthy.{' '}

@@ -1,0 +1,112 @@
+{
+    "serviceData": [
+        {
+            "id": 1,
+            "location": "Ontario",
+            "popular": "Popular",
+            "PopularServices": [
+                {
+                    "Image": "https://polyesterstudio.com/wp-content/uploads/2020/08/5-01-768x768.jpg",
+                    "title": "Massage Therapy",
+                    "therapyDetails": {
+                        "therapytitle": "Massage Therapy",
+                        "description": "Looking to relive muscle tension and pain? Whether in a recent injury or recurring pain from headaches, back pain or arthritis",
+                        "booking": "Book for later",
+                        "type": "In-person",
+                        "priceDetail": "Price Varies",
+                        "apotimentDetails": "Book an appointment to talk with someone at a location near your",
+                        "locationDetails": [
+                            {
+                                "name": "pt Health-North Brampton",
+                                "address": "36 vodeen st, stuite 306",
+                                "distance": 4.1,
+                                "serviceDetails": [
+                                    {
+                                        "title": "Message Therapy",
+                                        "time": 30,
+                                        "cost": 70.0,
+                                        "clicican": [
+                                            {
+                                                "profession": "Message Therapy",
+                                                "name": "Oleg Sharovatov",
+                                                "time": "March 7, 9:00 am EST"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Message Therapy",
+                                        "time": 45,
+                                        "cost": 82.5,
+                                        "clicican": [
+                                            {
+                                                "profession": "Message Therapy",
+                                                "name": "Oleg Sharovatov",
+                                                "time": "March 7, 9:00 am EST"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Message Therapy",
+                                        "time": 60,
+                                        "cost": 70.0,
+                                        "clicican": [
+                                            {
+                                                "name": "Oleg Sharovatov",
+                                                "time": "March 7, 9:00 am EST"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "The Sports Medicine Specialists",
+                                "address": "247 McMurchy Ave. S",
+                                "distance": 6.6,
+                                "serviceDetails": [
+                                    {
+                                        "title": "Message Therapy",
+                                        "time": 30,
+                                        "cost": 70.0,
+                                        "clicican": [
+                                            {
+                                                "profession": "Message Therapy",
+                                                "name": "Conor McIntrye",
+                                                "time": "tomorrow, 3:30pm am EST"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Message Therapy",
+                                        "time": 60,
+                                        "cost": 105.0,
+                                        "clicican": [
+                                            {
+                                                "profession": "Message Therapy",
+                                                "name": "Conor McIntrye",
+                                                "time": "tomorrow, 3:30pm am EST"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                { "title": "Mental Health Counseling" },
+                { "title": "Nutrition and Food Advice" }
+            ],
+            "moreCareService": "More care services",
+            "moreCareServices": [{ "title": "Acupunture" }, { "title": "Brain Health Assesment" }]
+        },
+        {
+            "id": 2,
+            "location": "British Columbia",
+            "popular": "Popular"
+        },
+        {
+            "id": 3,
+            "location": "Manitoba",
+            "popular": "Popular"
+        }
+    ]
+}
