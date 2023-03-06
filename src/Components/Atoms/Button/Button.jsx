@@ -19,6 +19,7 @@ export default function Button({
     borderWidth,
     borderColor,
     Icon,
+    marginRight
 }) {
     return (
         <TouchableOpacity
@@ -40,6 +41,7 @@ export default function Button({
                 bottom: bottomPos,
                 borderWidth: borderWidth,
                 borderColor: borderColor,
+                marginRight: marginRight
             }}
         >
             <Text style={{ fontSize: 13, alignSelf: 'center', color: color, fontWeight: 'bold' }}>

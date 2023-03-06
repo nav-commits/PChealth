@@ -1,5 +1,5 @@
-import { View, Text, StyleSheet, Modal, } from 'react-native';
-import React, { useState } from 'react';
+import { View, Text, StyleSheet, Modal } from 'react-native';
+import React, { useState, useContext } from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Button from '../../Atoms/Button/Button';
 import Label from '../../Atoms/Label/Label';
@@ -7,11 +7,13 @@ import { provinceOptions } from '../../../Utils/Provinces';
 import ListItemContent from '../../Organisms/ListItemContent/ListItemContent';
 import { serviceData } from '../../../data/Service.json';
 import ServiceTypeContent from '../../Organisms/ServiceTypeContent/ServiceTypeContent';
+import { MainContext } from '../../../Context/MainContext';
 
 export default function BookAppointment({ navigation }) {
     const [modalVisible, setModalVisible] = React.useState(false);
     const [chosenOption, setChosenOption] = useState('Ontario');
     const [filterData, setFilterData] = useState([serviceData[0]]);
+    const { setServiceType } = useContext(MainContext);
 
     const submitHandler = () => {
         setModalVisible(true);
@@ -22,16 +24,13 @@ export default function BookAppointment({ navigation }) {
             setFilterData(filterItemsArray);
         }
     };
-    
- 
     const onPress = (title) => {
         let servicesData = serviceData.map((data) => {
-            let filteredService = data.PopularServices.find((service) => service.title === title)
+            let filteredService = data.PopularServices.find((service) => service.title === title);
             return filteredService;
-        })
-        navigation.navigate('ServiceTypeDetail', {
-            serviceType: servicesData
         });
+        setServiceType(servicesData);
+        navigation.navigate('ServiceTypeDetail');
     };
     return (
         <View>

@@ -6,6 +6,7 @@ export const MainContext = createContext();
 function MainContextProvider(props) {
     const [modalVisible, setModalVisible] = React.useState(false);
     const [filteredItems, setFilteredItems] = useState([]);
+    const [serviceType, setServiceType] = useState([]);
 
     return (
         <MainContext.Provider
@@ -13,7 +14,9 @@ function MainContextProvider(props) {
                 modalVisible,
                 setModalVisible,
                 filteredItems,
-                setFilteredItems
+                setFilteredItems,
+                serviceType,
+                setServiceType,
             }}
         >
             {props.children}
