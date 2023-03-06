@@ -14,7 +14,13 @@
                         "booking": { "img": "time-outline", "booking": "Book for later" },
                         "type": { "img": "person-outline", "type": "In-person" },
                         "priceDetail": { "img": "card-outline", "priceDetail": "Price Varies" },
-                        "appointmentDetails": "Book an appointment to talk with someone at a location near your",
+                        "appointmentDetails": [
+                            {
+                                "book": "Book for later",
+                                "inPerson": "In-Person",
+                                "appointmentDetails": "Book an appointment to talk with someone at a location near your"
+                            }
+                        ],
                         "locationDetails": [
                             {
                                 "name": "pt Health-North Brampton",
@@ -101,8 +107,7 @@
                         "booking": { "img": "time-outline", "booking": "Book for later" },
                         "type": { "img": "person-outline", "type": "Virtual" },
                         "priceDetail": { "img": "card-outline", "priceDetail": "Price Varies" },
-                        "appointmentDetails": "Book an appointment to talk with someone at a location near your",
-                        "bookingType": [
+                        "appointmentDetails": [
                             {
                                 "title": "Meet now",
                                 "type": "Virtual",
@@ -151,7 +156,13 @@
                         "booking": { "img": "time-outline", "booking": "Book for later" },
                         "type": { "img": "person-outline", "type": "In-person" },
                         "priceDetail": { "img": "card-outline", "priceDetail": "Price Varies" },
-                        "appointmentDetails": "Book an appointment to talk with someone at a location near your",
+                        "appointmentDetails": [
+                            {
+                                "book": "Book for later",
+                                "inPerson": "In-Person",
+                                "appointmentDetails": "Book an appointment to talk with someone at a location near your"
+                            }
+                        ],
                         "locationDetails": [
                             {
                                 "name": "pt Health-North Brampton",

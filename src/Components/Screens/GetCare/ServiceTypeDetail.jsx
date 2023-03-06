@@ -8,7 +8,7 @@ export default function ServiceTypeDetail({ navigation }) {
     const { serviceType } = useContext(MainContext);
     console.log(serviceType)
     const onPress = () => {
-        navigation.navigate('Book an Appointment');
+        navigation.navigate('BookingType');
     };
     return (
         <View>

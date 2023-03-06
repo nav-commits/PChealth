@@ -14,6 +14,7 @@ import React from 'react';
 import MainContextProvider from './src/Context/MainContext';
 import BookAppointment from './src/Components/Screens/GetCare/BookAppointment';
 import ServiceTypeDetail from './src/Components/Screens/GetCare/ServiceTypeDetail';
+import BookingType from './src/Components/Screens/GetCare/BookingType';
 
 const MyTheme = {
     ...DefaultTheme,
@@ -65,10 +66,9 @@ export default function App() {
                             options={{ headerShown: false }}
                             component={BottomNavigation}
                         />
-
                         <Stack.Screen name='Book an Appointment' component={BookAppointment} />
-
                         <Stack.Screen name='ServiceTypeDetail' component={ServiceTypeDetail} />
+                        <Stack.Screen name='BookingType' component={BookingType} />
                     </Stack.Navigator>
                 </NavigationContainer>
             </MainContextProvider>

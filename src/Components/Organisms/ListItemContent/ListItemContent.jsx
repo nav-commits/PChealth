@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import RadioButton from '../../Atoms/RadioButton/RadioButton';
 import Divider from '../../Atoms/Divider/Divider';
 
-export default function ListItemContent({ data, setChosenOption, chosenOption, filterByProvince }) {
+export default function ListItemContent({ data, setChosenOption, chosenOption, updateSelectedItem }) {
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
             {data.map((option,idx) => {
@@ -15,7 +15,7 @@ export default function ListItemContent({ data, setChosenOption, chosenOption, f
                                 setChosenOption={setChosenOption}
                                 chosenOption={chosenOption}
                                 optionValue={option.value}
-                                filterByProvince={filterByProvince}
+                                updateSelectedItem={updateSelectedItem}
                             />
                         </View>
                         <Divider

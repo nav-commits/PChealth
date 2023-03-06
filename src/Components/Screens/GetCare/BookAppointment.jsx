@@ -18,7 +18,7 @@ export default function BookAppointment({ navigation }) {
     const submitHandler = () => {
         setModalVisible(true);
     };
-    const filterByProvince = (province) => {
+    const updateSelectedItem = (province) => {
         if (provinceOptions.find((item) => item.value === province)) {
             const filterItemsArray = serviceData.filter((data) => data.location === province);
             setFilterData(filterItemsArray);
@@ -54,7 +54,7 @@ export default function BookAppointment({ navigation }) {
                         data={provinceOptions}
                         setChosenOption={setChosenOption}
                         chosenOption={chosenOption}
-                        filterByProvince={filterByProvince}
+                        updateSelectedItem={updateSelectedItem}
                     />
                     <Button
                         title={'Save'}
