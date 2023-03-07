@@ -2,6 +2,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import React, { useContext, useState } from 'react';
 import { MainContext } from '../../../Context/MainContext';
 import RadioButton from '../../Atoms/RadioButton/RadioButton';
+import Button from '../../Atoms/Button/Button';
 
 export default function BookingType({ navigation }) {
     const { serviceType, setFoundAppointment, foundAppointment } = useContext(MainContext);
@@ -18,10 +19,14 @@ export default function BookingType({ navigation }) {
             setFoundAppointment(findItem);
         }
     };
-    console.log(foundAppointment);
-    // const onPress = () => {
-    //     navigation.navigate('Book an Appointment');
-    // };
+    const onPress = () => {
+        if (foundAppointment.some(item => item?.type === 'Virtual')) {
+            navigation.navigate('AppointmentFor');
+        }
+        else {
+            navigation.navigate('Location');
+        }
+    };
     return (
         <View>
             <Text
@@ -69,6 +74,19 @@ export default function BookingType({ navigation }) {
                     ))}
                 </View>
             ))}
+            <Button
+                title='Continue'
+                backgroundColor='hsl(240, 25%, 25%)'
+                color='white'
+                paddingVertical={10}
+                borderRadius={20}
+                borderWidth={2}
+                marginLeft={15}
+                marginRight={15}
+                marginTop={50}
+                borderColor='hsl(240, 25%, 25%)'
+                onPress={onPress}
+            />
         </View>
     );
 }

@@ -15,6 +15,8 @@ import MainContextProvider from './src/Context/MainContext';
 import BookAppointment from './src/Components/Screens/GetCare/BookAppointment';
 import ServiceTypeDetail from './src/Components/Screens/GetCare/ServiceTypeDetail';
 import BookingType from './src/Components/Screens/GetCare/BookingType';
+import Location from './src/Components/Screens/GetCare/Location';
+import AppointmentFor from './src/Components/Screens/GetCare/AppointmentFor';
 
 const MyTheme = {
     ...DefaultTheme,
@@ -69,6 +71,8 @@ export default function App() {
                         <Stack.Screen name='Book an Appointment' component={BookAppointment} />
                         <Stack.Screen name='ServiceTypeDetail' component={ServiceTypeDetail} />
                         <Stack.Screen name='BookingType' component={BookingType} />
+                        <Stack.Screen name='Location' component={Location} />
+                        <Stack.Screen name='AppointmentFor' component={AppointmentFor} />
                     </Stack.Navigator>
                 </NavigationContainer>
             </MainContextProvider>
