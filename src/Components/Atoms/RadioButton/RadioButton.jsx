@@ -6,7 +6,7 @@ export default function RadioButton({ setChosenOption, chosenOption, optionValue
             style={styles.radioCircle}
             onPress={() => {
                 setChosenOption(optionValue);
-                updateSelectedItem(optionValue)
+                updateSelectedItem(optionValue);
             }}
         >
             {chosenOption === optionValue && (
