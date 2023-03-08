@@ -44,18 +44,25 @@ export default function BookingType({ navigation }) {
                     {option?.therapyDetails?.appointmentDetails.map((appointment, id) => (
                         <ChoiceCard
                             chosenOption={chosenOption}
-                            appointmentTitle={appointment?.title}
-                            appointmentType={appointment?.type}
-                            appointmentDetails={appointment?.appointmentDetails}
-                            id={id}
-                            radioButton={
-                                <RadioButton
-                                    setChosenOption={setChosenOption}
-                                    chosenOption={chosenOption}
-                                    optionValue={appointment?.title}
-                                    updateSelectedItem={updateSelectedItem}
-                                />
+                            appointmentTitle={appointment.title}
+                            appointmentDescription={
+                                <View style={{ display: 'flex', flexDirection: 'row' }}>
+                                    <Text style={styles.title}>{appointment.title}</Text>
+                                    <Text style={styles.title}>{appointment.type}</Text>
+                                </View>
                             }
+                            appointmentDetails={
+                                <View style={{ display: 'flex', flexDirection: 'row' }}>
+                                    <Text style={styles.description}>{appointment.appointmentDetails}</Text>
+                                    <RadioButton
+                                        setChosenOption={setChosenOption}
+                                        chosenOption={chosenOption}
+                                        optionValue={appointment?.title}
+                                        updateSelectedItem={updateSelectedItem}
+                                    />
+                                </View>
+                            }
+                            id={id}
                         />
                     ))}
                 </View>

@@ -1,14 +1,7 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React, { useContext, useState } from 'react';
 
-export default function ChoiceCard({
-    chosenOption,
-    appointmentTitle,
-    radioButton,
-    id,
-    appointmentType,
-    appointmentDetails,
-}) {
+export default function ChoiceCard({ chosenOption, appointmentDescription, id, appointmentDetails, appointmentTitle }) {
     return (
         <View
             key={id}
@@ -20,14 +13,8 @@ export default function ChoiceCard({
                 borderWidth: 2,
             }}
         >
-            <View style={{ display: 'flex', flexDirection: 'row' }}>
-                <Text style={styles.title}>{appointmentTitle}</Text>
-                <Text style={styles.title}>{appointmentType}</Text>
-            </View>
-            <View style={{ display: 'flex', flexDirection: 'row' }}>
-                <Text style={styles.description}>{appointmentDetails}</Text>
-                {radioButton}
-            </View>
+            {appointmentDescription}
+            {appointmentDetails}
         </View>
     );
 }
