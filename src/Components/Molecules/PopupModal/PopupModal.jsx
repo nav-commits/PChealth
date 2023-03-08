@@ -6,8 +6,8 @@ export default function PopupModal({ modalVisible, icon, info }) {
         <Modal animationType='slide' transparent={true} visible={modalVisible}>
             <View style={styles.modalView}>
                 {info.map((item, i) => (
-                    <View key={i}>
-                        <View style={styles.contentContainer}>
+                    <View>
+                        <View key={i} style={styles.contentContainer}>
                             <View style={styles.imgDirection}>{icon}</View>
                             <Text style={styles.textStyle}>{item.title}</Text>
                             <View style={styles.innerContainer}>

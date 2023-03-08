@@ -9,16 +9,31 @@ export default function AppointmentFor({ navigation }) {
     const [chosenOption, setChosenOption] = useState('Myself');
     // const onPress = () => {
     // };
-    console.log(foundAppointment)
+    console.log(foundAppointment);
     return (
         <View>
-            <Text>Who is the appointment for?</Text>
+            <Text
+                style={{
+                    padding: 12,
+                    color: 'hsl(240, 25%, 25%)',
+                    fontWeight: 'bold',
+                    fontSize: 15
+                }}
+            >
+                Who is the appointment for?
+            </Text>
             {foundAppointment.map((appointment, id) => (
                 <ChoiceCard
                     chosenOption={chosenOption}
                     appointmentTitle={appointment?.attendingPerson}
                     appointmentDescription={
-                        <View style={{ display: 'flex', flexDirection: 'row' }}>
+                        <View
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'row',
+                                justifyContent: 'space-between',
+                            }}
+                        >
                             <Text style={styles.title}>{appointment?.attendingPerson}</Text>
                             <RadioButton
                                 setChosenOption={setChosenOption}
@@ -39,12 +54,6 @@ const styles = StyleSheet.create({
         color: 'hsl(240, 25%, 25%)',
         fontWeight: 'bold',
         padding: 2,
-        fontSize: 13,
-    },
-    description: {
-        paddingLeft: 2,
-        paddingRight: 10,
-        paddingTop: 5,
         fontSize: 13,
     },
 });

@@ -27,6 +27,8 @@ export default function BookingType({ navigation }) {
             navigation.navigate('Location');
         }
     };
+
+    console.log(foundAppointment)
     return (
         <View>
             <Text
@@ -52,8 +54,10 @@ export default function BookingType({ navigation }) {
                                 </View>
                             }
                             appointmentDetails={
-                                <View style={{ display: 'flex', flexDirection: 'row' }}>
-                                    <Text style={styles.description}>{appointment.appointmentDetails}</Text>
+                                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                                    <Text style={styles.description}>
+                                        {appointment.appointmentDetails}
+                                    </Text>
                                     <RadioButton
                                         setChosenOption={setChosenOption}
                                         chosenOption={chosenOption}
