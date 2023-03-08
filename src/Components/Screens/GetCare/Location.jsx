@@ -6,12 +6,7 @@ import Button from '../../Atoms/Button/Button';
 
 export default function Location({ navigation }) {
     // const onPress = () => {
-    //     if (foundAppointment.title.includes('Virtual')) {
-    //         navigation.navigate('Book an Appointment');
-    //     }
-    //     else {
-    //         navigation.navigate('Book an Appointment');
-    //     }
+    
     // };
     return (
         <View>

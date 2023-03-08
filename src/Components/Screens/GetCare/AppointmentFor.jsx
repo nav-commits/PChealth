@@ -4,12 +4,6 @@ import React, { useContext, useState } from 'react';
 
 export default function AppointmentFor({ navigation }) {
     // const onPress = () => {
-    //     if (foundAppointment.title.includes('Virtual')) {
-    //         navigation.navigate('Book an Appointment');
-    //     }
-    //     else {
-    //         navigation.navigate('Book an Appointment');
-    //     }
     // };
     return (
         <View>

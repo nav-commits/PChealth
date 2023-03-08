@@ -213,7 +213,7 @@
                                         "distance": 6.6,
                                         "serviceDetails": [
                                             {
-                                                "title": "Message Therapy",
+                                                "title": "Physiotherapy",
                                                 "time": 30,
                                                 "cost": 70.0,
                                                 "clinician": [
@@ -225,12 +225,12 @@
                                                 ]
                                             },
                                             {
-                                                "title": "Message Therapy",
+                                                "title": "Physiotherapy",
                                                 "time": 60,
                                                 "cost": 105.0,
                                                 "clinician": [
                                                     {
-                                                        "profession": "Message Therapy",
+                                                        "profession": "Physiotherapy",
                                                         "name": "Conor McIntrye",
                                                         "time": "tomorrow, 3:30pm am EST"
                                                     }

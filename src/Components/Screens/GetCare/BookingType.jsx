@@ -3,10 +3,11 @@ import React, { useContext, useState } from 'react';
 import { MainContext } from '../../../Context/MainContext';
 import RadioButton from '../../Atoms/RadioButton/RadioButton';
 import Button from '../../Atoms/Button/Button';
+import ChoiceCard from '../../Molecules/ChoiceCard/ChoiceCard';
 
 export default function BookingType({ navigation }) {
     const { serviceType, setFoundAppointment, foundAppointment } = useContext(MainContext);
-    const [chosenOption, setChosenOption] = useState('Book for later');
+    const [chosenOption, setChosenOption] = useState('');
 
     const updateSelectedItem = (selectedItem) => {
         if (selectedItem) {
@@ -20,10 +21,9 @@ export default function BookingType({ navigation }) {
         }
     };
     const onPress = () => {
-        if (foundAppointment.some(item => item?.type === 'Virtual')) {
+        if (foundAppointment.some((item) => item?.type === 'Virtual')) {
             navigation.navigate('AppointmentFor');
-        }
-        else {
+        } else {
             navigation.navigate('Location');
         }
     };
@@ -42,35 +42,21 @@ export default function BookingType({ navigation }) {
             {serviceType.map((option, id) => (
                 <View key={id}>
                     {option?.therapyDetails?.appointmentDetails.map((appointment, id) => (
-                        <View
-                            key={id}
-                            style={{
-                                borderRadius: 12,
-                                padding: 12,
-                                margin: 13,
-                                borderColor:
-                                    appointment?.title === chosenOption
-                                        ? 'hsl(240, 25%, 25%)'
-                                        : 'grey',
-                                borderWidth: 2,
-                            }}
-                        >
-                            <View style={{ display: 'flex', flexDirection: 'row' }}>
-                                <Text style={styles.title}>{appointment?.title}</Text>
-                                <Text style={styles.title}>{appointment?.type}</Text>
-                            </View>
-                            <View style={{ display: 'flex', flexDirection: 'row' }}>
-                                <Text style={styles.description}>
-                                    {appointment?.appointmentDetails}
-                                </Text>
+                        <ChoiceCard
+                            chosenOption={chosenOption}
+                            appointmentTitle={appointment?.title}
+                            appointmentType={appointment?.type}
+                            appointmentDetails={appointment?.appointmentDetails}
+                            id={id}
+                            radioButton={
                                 <RadioButton
                                     setChosenOption={setChosenOption}
                                     chosenOption={chosenOption}
                                     optionValue={appointment?.title}
                                     updateSelectedItem={updateSelectedItem}
                                 />
-                            </View>
-                        </View>
+                            }
+                        />
                     ))}
                 </View>
             ))}

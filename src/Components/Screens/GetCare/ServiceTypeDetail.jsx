@@ -6,7 +6,6 @@ import { MainContext } from '../../../Context/MainContext';
 
 export default function ServiceTypeDetail({ navigation }) {
     const { serviceType } = useContext(MainContext);
-    console.log(serviceType)
     const onPress = () => {
         navigation.navigate('BookingType');
     };
