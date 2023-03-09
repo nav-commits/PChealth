@@ -15,22 +15,22 @@ export default function Location({ navigation }) {
                     return checkItem;
                 })
             );
-            console.log(findItem)
+            console.log(findItem);
             setServiceLocation(findItem);
         }
     };
 
     const onPress = (item) => {
         updateSelectedItem(item);
-        setChosenOption(item)
-        navigation.navigate('ServiceTime');
+        setChosenOption(item);
+        navigation.navigate('LookingForService');
     };
     return (
         <View>
             <Text style={styles.title}>Choose a Location</Text>
-            {foundAppointment.map((appointment, id) => (
-                <View key={id}>
-                    {appointment?.locationDetails.map((location, id) => (
+            {foundAppointment.map((appointment) =>
+                appointment?.locationDetails.map((location, id) => (
+                    <View key={id}>
                         <ChoiceCard
                             chosenOption={chosenOption}
                             onPress={onPress}
@@ -56,9 +56,9 @@ export default function Location({ navigation }) {
                                 </View>
                             }
                         />
-                    ))}
-                </View>
-            ))}
+                    </View>
+                ))
+            )}
         </View>
     );
 }

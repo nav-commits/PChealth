@@ -3,12 +3,19 @@ import React, { useContext, useState } from 'react';
 import ChoiceCard from '../../Molecules/ChoiceCard/ChoiceCard';
 import { MainContext } from '../../../Context/MainContext';
 import RadioButton from '../../Atoms/RadioButton/RadioButton';
+import Button from '../../Atoms/Button/Button';
 
 export default function AppointmentFor({ navigation }) {
     const { foundAppointment } = useContext(MainContext);
     const [chosenOption, setChosenOption] = useState('Myself');
-    // const onPress = () => {
-    // };
+
+    const updateSelectedItem = (selectedItem) => {
+        console.log(selectedItem, 'found item');
+    };
+
+    const onPress = () => {
+        navigation.navigate('LookingForService');
+    };
 
     return (
         <View>
@@ -35,6 +42,7 @@ export default function AppointmentFor({ navigation }) {
                                             setChosenOption={setChosenOption}
                                             chosenOption={chosenOption}
                                             optionValue={appointment?.attendingPerson}
+                                            updateSelectedItem={updateSelectedItem}
                                         />
                                     </View>
                                 }
@@ -42,6 +50,19 @@ export default function AppointmentFor({ navigation }) {
                         </View>
                     )
             )}
+            <Button
+                title='Continue'
+                backgroundColor='hsl(240, 25%, 25%)'
+                color='white'
+                paddingVertical={10}
+                borderRadius={20}
+                borderWidth={2}
+                marginLeft={15}
+                marginRight={15}
+                marginTop={50}
+                borderColor='hsl(240, 25%, 25%)'
+                onPress={onPress}
+            />
         </View>
     );
 }
