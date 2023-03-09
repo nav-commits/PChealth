@@ -41,7 +41,7 @@
                                             {
                                                 "title": "Message Therapy",
                                                 "time": 45,
-                                                "cost": 82.5,
+                                                "cost": 82.50,
                                                 "clinician": [
                                                     {
                                                         "profession": "Message Therapy",
@@ -53,7 +53,7 @@
                                             {
                                                 "title": "Message Therapy",
                                                 "time": 60,
-                                                "cost": 70.0,
+                                                "cost": 70.00,
                                                 "clinician": [
                                                     {
                                                         "name": "Oleg Sharovatov",
@@ -71,7 +71,7 @@
                                             {
                                                 "title": "Message Therapy",
                                                 "time": 30,
-                                                "cost": 70.0,
+                                                "cost": 70.00,
                                                 "clinician": [
                                                     {
                                                         "profession": "Message Therapy",
@@ -83,7 +83,7 @@
                                             {
                                                 "title": "Message Therapy",
                                                 "time": 60,
-                                                "cost": 105.0,
+                                                "cost": 105.00,
                                                 "clinician": [
                                                     {
                                                         "profession": "Message Therapy",
@@ -118,7 +118,7 @@
                                 "serviceDetails": {
                                     "title": "Mental Health Counseling",
                                     "time": 50,
-                                    "cost": 120.0,
+                                    "cost": 120.00,
                                     "type": "Virtual"
                                 }
                             },
@@ -131,7 +131,7 @@
                                 "serviceDetails": {
                                     "title": "Mental Health Counseling",
                                     "time": 50,
-                                    "cost": 120.0,
+                                    "cost": 120.00,
                                     "type": "Virtual",
                                     "clinician": [
                                         {
@@ -174,7 +174,7 @@
                                             {
                                                 "title": "Physiotherapy Initial Assessment",
                                                 "time": 60,
-                                                "cost": 100.0,
+                                                "cost": 100.00,
                                                 "clinician": [
                                                     {
                                                         "profession": "Physiotherapy",
@@ -191,7 +191,7 @@
                                             {
                                                 "title": "Physiotherapy Follow-up Treatment",
                                                 "time": 39,
-                                                "cost": 85.0,
+                                                "cost": 85.00,
                                                 "clinician": [
                                                     {
                                                         "profession": "Physiotherapy",
@@ -215,7 +215,7 @@
                                             {
                                                 "title": "Physiotherapy",
                                                 "time": 30,
-                                                "cost": 70.0,
+                                                "cost": 70.00,
                                                 "clinician": [
                                                     {
                                                         "profession": "Message Therapy",
@@ -227,7 +227,7 @@
                                             {
                                                 "title": "Physiotherapy",
                                                 "time": 60,
-                                                "cost": 105.0,
+                                                "cost": 105.00,
                                                 "clinician": [
                                                     {
                                                         "profession": "Physiotherapy",

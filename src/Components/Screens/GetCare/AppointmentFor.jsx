@@ -9,42 +9,39 @@ export default function AppointmentFor({ navigation }) {
     const [chosenOption, setChosenOption] = useState('Myself');
     // const onPress = () => {
     // };
-    console.log(foundAppointment);
+
     return (
         <View>
-            <Text
-                style={{
-                    padding: 12,
-                    color: 'hsl(240, 25%, 25%)',
-                    fontWeight: 'bold',
-                    fontSize: 15
-                }}
-            >
-                Who is the appointment for?
-            </Text>
-            {foundAppointment.map((appointment, id) => (
-                <ChoiceCard
-                    chosenOption={chosenOption}
-                    appointmentTitle={appointment?.attendingPerson}
-                    appointmentDescription={
-                        <View
-                            style={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                justifyContent: 'space-between',
-                            }}
-                        >
-                            <Text style={styles.title}>{appointment?.attendingPerson}</Text>
-                            <RadioButton
-                                setChosenOption={setChosenOption}
+            <Text style={styles.appointmentTitle}>Who is the appointment for?</Text>
+            {foundAppointment.map(
+                (appointment, id) =>
+                    appointment?.attendingPerson && (
+                        <View key={id}>
+                            <ChoiceCard
                                 chosenOption={chosenOption}
-                                optionValue={appointment?.attendingPerson}
+                                appointmentTitle={appointment?.attendingPerson}
+                                appointmentDescription={
+                                    <View
+                                        style={{
+                                            display: 'flex',
+                                            flexDirection: 'row',
+                                            justifyContent: 'space-between',
+                                        }}
+                                    >
+                                        <Text style={styles.title}>
+                                            {appointment?.attendingPerson}
+                                        </Text>
+                                        <RadioButton
+                                            setChosenOption={setChosenOption}
+                                            chosenOption={chosenOption}
+                                            optionValue={appointment?.attendingPerson}
+                                        />
+                                    </View>
+                                }
                             />
                         </View>
-                    }
-                    id={id}
-                />
-            ))}
+                    )
+            )}
         </View>
     );
 }
@@ -55,5 +52,11 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         padding: 2,
         fontSize: 13,
+    },
+    appointmentTitle: {
+        padding: 12,
+        color: 'hsl(240, 25%, 25%)',
+        fontWeight: 'bold',
+        fontSize: 15,
     },
 });

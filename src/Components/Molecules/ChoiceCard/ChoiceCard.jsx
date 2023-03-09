@@ -1,20 +1,27 @@
-import { View} from 'react-native';
-export default function ChoiceCard({ chosenOption, appointmentDescription, id, appointmentDetails, appointmentTitle }) {
+import { View, TouchableWithoutFeedback } from 'react-native';
+export default function ChoiceCard({
+    chosenOption,
+    appointmentDescription,
+    appointmentDetails,
+    appointmentTitle,
+    onPress,
+}) {
     return (
-        <View
-            key={id}
-            style={{
-                borderRadius: 12,
-                padding: 12,
-                margin: 13,
-                borderColor: appointmentTitle === chosenOption ? 'hsl(240, 25%, 25%)' : 'grey',
-                borderWidth: 2,
-            }}
+        <TouchableWithoutFeedback
+            onPress={() => onPress(appointmentTitle)}
         >
-            {appointmentDescription}
-            {appointmentDetails}
-        </View>
+            <View
+                style={{
+                    borderRadius: 12,
+                    padding: 12,
+                    margin: 13,
+                    borderColor: appointmentTitle === chosenOption ? 'hsl(240, 25%, 25%)' : 'grey',
+                    borderWidth: 2,
+                }}
+            >
+                {appointmentDescription}
+                {appointmentDetails}
+            </View>
+        </TouchableWithoutFeedback>
     );
 }
-
-

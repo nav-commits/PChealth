@@ -17,6 +17,7 @@ import ServiceTypeDetail from './src/Components/Screens/GetCare/ServiceTypeDetai
 import BookingType from './src/Components/Screens/GetCare/BookingType';
 import Location from './src/Components/Screens/GetCare/Location';
 import AppointmentFor from './src/Components/Screens/GetCare/AppointmentFor';
+import ServiceTime from './src/Components/Screens/GetCare/ServiceTime';
 
 const MyTheme = {
     ...DefaultTheme,
@@ -73,6 +74,7 @@ export default function App() {
                         <Stack.Screen name='BookingType' component={BookingType} />
                         <Stack.Screen name='Location' component={Location} />
                         <Stack.Screen name='AppointmentFor' component={AppointmentFor} />
+                        <Stack.Screen name='ServiceTime' component={ServiceTime} />
                     </Stack.Navigator>
                 </NavigationContainer>
             </MainContextProvider>
