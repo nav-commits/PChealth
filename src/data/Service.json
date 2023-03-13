@@ -25,8 +25,9 @@
                                         "name": "pt Health-North Brampton",
                                         "address": "36 vodeen st, stuite 306",
                                         "distance": 4.1,
-                                        "serviceDetails": [
+                                        "costDetails": [
                                             {
+                                                "id": 1,
                                                 "title": "Message Therapy",
                                                 "time": 30,
                                                 "cost": 70.0,
@@ -39,9 +40,10 @@
                                                 ]
                                             },
                                             {
+                                                "id": 2,
                                                 "title": "Message Therapy",
                                                 "time": 45,
-                                                "cost": 82.50,
+                                                "cost": 82.5,
                                                 "clinician": [
                                                     {
                                                         "profession": "Message Therapy",
@@ -51,9 +53,10 @@
                                                 ]
                                             },
                                             {
+                                                "id": 3,
                                                 "title": "Message Therapy",
                                                 "time": 60,
-                                                "cost": 70.00,
+                                                "cost": 70.0,
                                                 "clinician": [
                                                     {
                                                         "name": "Oleg Sharovatov",
@@ -67,11 +70,12 @@
                                         "name": "The Sports Medicine Specialists",
                                         "address": "247 McMurchy Ave. S",
                                         "distance": 6.6,
-                                        "serviceDetails": [
+                                        "costDetails": [
                                             {
+                                                "id": 1,
                                                 "title": "Message Therapy",
                                                 "time": 30,
-                                                "cost": 70.00,
+                                                "cost": 70.0,
                                                 "clinician": [
                                                     {
                                                         "profession": "Message Therapy",
@@ -81,9 +85,10 @@
                                                 ]
                                             },
                                             {
+                                                "id": 2,
                                                 "title": "Message Therapy",
                                                 "time": 60,
-                                                "cost": 105.00,
+                                                "cost": 105.0,
                                                 "clinician": [
                                                     {
                                                         "profession": "Message Therapy",
@@ -117,6 +122,7 @@
                                 "attendingPerson": "Myself",
                                 "serviceDetails": {
                                     "title": "Mental Health Counseling",
+                                    "description": "See mental health therapist on Maple by text, video, or audio in under 12 hours. All therapists are Registered Social workers or Registered Psychotherapists and your sessions may be covered.",
                                     "time": 50,
                                     "cost": 120.00,
                                     "type": "Virtual"
@@ -130,8 +136,9 @@
                                 "attendingPerson": "Myself",
                                 "serviceDetails": {
                                     "title": "Mental Health Counseling",
+                                    "description": "See mental health therapist on Maple by text, video, or audio in under 12 hours. All therapists are Registered Social workers or Registered Psychotherapists and your sessions may be covered.",
                                     "time": 50,
-                                    "cost": 120.00,
+                                    "cost": 120.0,
                                     "type": "Virtual",
                                     "clinician": [
                                         {
@@ -170,11 +177,12 @@
                                         "name": "pt Health-North Brampton",
                                         "address": "36 vodden st, stuite 306",
                                         "distance": 4.1,
-                                        "serviceDetails": [
+                                        "costDetails": [
                                             {
+                                                "id": 1,
                                                 "title": "Physiotherapy Initial Assessment",
                                                 "time": 60,
-                                                "cost": 100.00,
+                                                "cost": 100.0,
                                                 "clinician": [
                                                     {
                                                         "profession": "Physiotherapy",
@@ -189,9 +197,10 @@
                                                 ]
                                             },
                                             {
+                                                "id": 2,
                                                 "title": "Physiotherapy Follow-up Treatment",
                                                 "time": 39,
-                                                "cost": 85.00,
+                                                "cost": 85.0,
                                                 "clinician": [
                                                     {
                                                         "profession": "Physiotherapy",
@@ -211,11 +220,12 @@
                                         "name": "The Sports Medicine Specialists",
                                         "address": "247 McMurchy Ave. S",
                                         "distance": 6.6,
-                                        "serviceDetails": [
+                                        "costDetails": [
                                             {
+                                                "id": 1,
                                                 "title": "Physiotherapy",
                                                 "time": 30,
-                                                "cost": 70.00,
+                                                "cost": 70.0,
                                                 "clinician": [
                                                     {
                                                         "profession": "Message Therapy",
@@ -225,9 +235,10 @@
                                                 ]
                                             },
                                             {
+                                                "id": 2,
                                                 "title": "Physiotherapy",
                                                 "time": 60,
-                                                "cost": 105.00,
+                                                "cost": 105.0,
                                                 "clinician": [
                                                     {
                                                         "profession": "Physiotherapy",
