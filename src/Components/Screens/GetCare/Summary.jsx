@@ -1,15 +1,21 @@
 import { View, Text, StyleSheet } from 'react-native';
-import React, { useContext, useState } from 'react';
-import ChoiceCard from '../../Molecules/ChoiceCard/ChoiceCard';
+import React, { useContext} from 'react';
 import { MainContext } from '../../../Context/MainContext';
-import RadioButton from '../../Atoms/RadioButton/RadioButton';
-import Button from '../../Atoms/Button/Button';
 
 export default function Summary({ navigation }) {
     const { foundAppointment } = useContext(MainContext);
+    console.log(foundAppointment)
     return (
         <View>
-            <Text style={styles.appointmentTitle}>Summary</Text>
+            <Text style={styles.appointmentTitle}>Your Summary</Text>
+            {foundAppointment.map((item, idx) => {
+                <View key={idx}>
+                    <Text>{item?.serviceDetails?.title}</Text>
+                    <Text>{item?.serviceDetails?.description}</Text>
+                    <Text>{item?.serviceDetails?.time}</Text>
+                    <Text>{item?.serviceDetails?.cost}</Text>
+                </View>;
+            })}
         </View>
     );
 }

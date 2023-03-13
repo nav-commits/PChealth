@@ -6,7 +6,7 @@ import RadioButton from '../../Atoms/RadioButton/RadioButton';
 import Button from '../../Atoms/Button/Button';
 
 export default function LookingForService({ navigation }) {
-    const { foundAppointment, serviceLocation, selectedTherapy, setSelectedTherapy } =
+    const { foundAppointment, serviceLocation, setSelectedTherapy } =
         useContext(MainContext);
     const [chosenOption, setChosenOption] = useState('Mental Health Counseling');
     const [chosenTherapy, setTherapy] = useState('');

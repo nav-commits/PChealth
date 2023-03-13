@@ -10,6 +10,8 @@ function MainContextProvider(props) {
     const [foundAppointment, setFoundAppointment] = useState([]);
     const [serviceLocation, setServiceLocation] = useState([]);
     const [selectedTherapy, setSelectedTherapy] = useState([]);
+    const [clinicianVirtual, setClinicianVirtual] = useState([]);
+    const [clinicianInPerson, setClinicianInPerson] = useState([]);
 
     return (
         <MainContext.Provider
@@ -26,6 +28,10 @@ function MainContextProvider(props) {
                 setServiceLocation,
                 selectedTherapy,
                 setSelectedTherapy,
+                clinicianVirtual,
+                setClinicianVirtual,
+                clinicianInPerson,
+                setClinicianInPerson,
             }}
         >
             {props.children}
