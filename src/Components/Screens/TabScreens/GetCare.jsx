@@ -1,9 +1,12 @@
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import Label from '../../Atoms/Label/Label';
 import Card from '../../Molecules/Card/Card';
 import Button from '../../Atoms/Button/Button';
 
-export default function GetCare() {
+export default function GetCare({navigation}) {
+      const submitHandler = () => {
+          navigation.navigate('Book an Appointment');
+     };
     return (
         <View style={{ padding: 40 }}>
             <Label
@@ -13,18 +16,13 @@ export default function GetCare() {
                 fontWeight='bold'
                 textAlign={'center'}
             />
-            <Label
-                title='Need to see a provider?'
-                size={16}
-                marginTop={30}
-                fontWeight='bold'
-            />
+            <Label title='Need to see a provider?' size={16} marginTop={30} fontWeight='bold' />
             <Card
                 cardContent={
-                    <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                        <View style={{ paddingLeft: 10, position: 'relative', marginTop: 50 }}>
-                            <Text style={{ fontSize: 12, fontWeight:'bold' }}>Book an appointment</Text>
-                            <Text style={{ fontSize: 12, marginRight: 120 }}>
+                    <View style={styles.parentContainer}>
+                        <View style={styles.innerContainer}>
+                            <Text style={styles.mainTitle}>Book an appointment</Text>
+                            <Text style={styles.textContent}>
                                 Schedule a virtual or in-person visit with a healthcare provider.
                             </Text>
                         </View>
@@ -52,13 +50,37 @@ export default function GetCare() {
                         borderRadius={20}
                         marginBottom={30}
                         position={'absolute'}
-                        top={-120}
+                        top={-130}
                         left={20}
+                        onPress={submitHandler}
                     />
                 }
                 backgroundColor='#CAE1F9'
                 width={300}
+                height={220}
             />
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    parentContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    innerContainer: {
+        paddingLeft: 10,
+        position: 'relative',
+        marginTop: 50,
+    },
+    mainTitle: {
+        fontSize: 13,
+        fontWeight: 'bold',
+        marginBottom: 12,
+    },
+    textContent: {
+        fontSize: 12,
+        marginRight: 120,
+    },
+});

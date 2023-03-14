@@ -17,7 +17,9 @@ export default function Button({
     disabled,
     bottomPos,
     borderWidth,
-    borderColor
+    borderColor,
+    Icon,
+    marginRight
 }) {
     return (
         <TouchableOpacity
@@ -38,11 +40,12 @@ export default function Button({
                 color: color,
                 bottom: bottomPos,
                 borderWidth: borderWidth,
-                borderColor: borderColor
+                borderColor: borderColor,
+                marginRight: marginRight
             }}
         >
-            <Text style={{ fontSize: 13, alignSelf: 'center', color: color, fontWeight: 'bold'}}>
-                {title}
+            <Text style={{ fontSize: 13, alignSelf: 'center', color: color, fontWeight: 'bold' }}>
+                {Icon ? Icon : null} {title}
             </Text>
         </TouchableOpacity>
     );

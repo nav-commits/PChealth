@@ -1,7 +1,7 @@
 import { View, StyleSheet, FlatList, Text } from 'react-native';
 import Card from '../../Molecules/Card/Card';
 import Label from '../../Atoms/Label/Label';
-export default function CardContent({ data, contain, width, backgroundColor }) {
+export default function CardContent({ data, contain, width, backgroundColor, height }) {
     return (
         <View>
             <View
@@ -33,7 +33,14 @@ export default function CardContent({ data, contain, width, backgroundColor }) {
                 renderItem={({ item }) => {
                     return (
                         <View>
-                            <Card img={item.img} content={item.content} contain={contain} width={width} backgroundColor={backgroundColor} />
+                            <Card
+                                img={item.img}
+                                content={item.content}
+                                contain={contain}
+                                width={width}
+                                backgroundColor={backgroundColor}
+                                height={height}
+                            />
                         </View>
                     );
                 }}
