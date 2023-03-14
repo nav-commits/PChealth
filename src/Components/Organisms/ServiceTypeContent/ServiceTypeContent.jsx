@@ -10,9 +10,9 @@ export default function ServiceTypeContent({ filterData, onPress }) {
                 return (
                     <View key={option.id}>
                         <Text style={styles.title}>{option.popular}</Text>
-                        {option.PopularServices.map((item) => {
+                        {option.PopularServices.map((item, idx) => {
                             return (
-                                <View style={styles.parentContainer} key={item?.id}>
+                                <View style={styles.parentContainer} key={idx}>
                                     <TouchableOpacity onPress={() => onPress(item?.title, item?.location)}>
                                         <View style={styles.childContainer}>
                                             <Text style={styles.labelTitle}>{item?.title}</Text>
@@ -30,9 +30,9 @@ export default function ServiceTypeContent({ filterData, onPress }) {
                         })}
 
                         <Text style={styles.title}>{option.moreCareService}</Text>
-                        {option.moreCareServices.map((item) => {
+                        {option.moreCareServices.map((item, idx) => {
                             return (
-                                <View style={styles.parentContainer} key={item?.id}>
+                                <View style={styles.parentContainer} key={idx}>
                                     <TouchableOpacity onPress={() => onPress(item?.title, item?.location)}>
                                         <View style={styles.childContainer}>
                                             <Text style={styles.labelTitle}>{item?.title}</Text>
