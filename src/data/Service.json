@@ -6,7 +6,9 @@
             "popular": "Popular",
             "PopularServices": [
                 {
+                    "location": "Ontario",
                     "title": "Massage Therapy",
+                    "popular": "Popular",
                     "Image": "https://polyesterstudio.com/wp-content/uploads/2020/08/5-01-768x768.jpg",
                     "therapyDetails": {
                         "therapyTitle": "Massage Therapy",
@@ -122,6 +124,8 @@
                 },
                 {
                     "title": "Mental Health Counseling",
+                    "location": "Ontario",
+                    "popular": "Popular",
                     "Image": "https://polyesterstudio.com/wp-content/uploads/2020/08/5-01-768x768.jpg",
                     "therapyDetails": {
                         "therapyTitle": "Mental Health Counseling",
@@ -167,7 +171,7 @@
                                         },
                                         {
                                             "id": 2,
-                                            "img": "https://www.pimlicoosteopathy.com/wp-content/uploads/2019/07/Profile-picture-Tania-Mattock-2019-scaled-480x480.jpg",
+                                            "img": "https://d1k8hez1mxkuxw.cloudfront.net/external_data/1684918-s10/5540513.jpeg",
                                             "meetingType": "Virtual",
                                             "profession": "MSW, RSW",
                                             "name": "Melanie Abbott",
@@ -181,6 +185,8 @@
                 },
                 {
                     "title": "Physiotherapy",
+                    "location": "Ontario",
+                    "popular": "Popular",
                     "Image": "https://polyesterstudio.com/wp-content/uploads/2020/08/5-01-768x768.jpg",
                     "therapyDetails": {
                         "therapyTitle": "Physiotherapy",
@@ -209,16 +215,16 @@
                                                     {
                                                         "id": 1,
                                                         "meetingType": "In-Person",
-                                                        "img": "https://media.licdn.com/dms/image/C4E03AQGLDeTW8C6Ajg/profile-displayphoto-shrink_800_800/0/1642840386229?e=2147483647&v=beta&t=OF2o-d0lwUbpz235zwNrlit75uB2Ya-woNisIo0IAME",
                                                         "profession": "Physiotherapy",
+                                                        "img": "https://media.licdn.com/dms/image/C4E03AQGLDeTW8C6Ajg/profile-displayphoto-shrink_800_800/0/1642840386229?e=2147483647&v=beta&t=OF2o-d0lwUbpz235zwNrlit75uB2Ya-woNisIo0IAME",
                                                         "name": "Elizabeth Abraham",
                                                         "time": "March 7, 9:00 am EST"
                                                     },
                                                     {
                                                         "id": 2,
                                                         "meetingType": "In-Person",
-                                                        "img": "https://painhero.ca/wp-content/uploads/Care-Plus-Physiotherapy-Gaganpreet-Kaur.jpg",
                                                         "profession": "Physiotherapy",
+                                                        "img": "https://painhero.ca/wp-content/uploads/Care-Plus-Physiotherapy-Gaganpreet-Kaur.jpg",
                                                         "name": "Amandeep Sahota",
                                                         "time": "March 8, 11: 45 am EST"
                                                     }
@@ -233,9 +239,9 @@
                                                     {
                                                         "id": 1,
                                                         "meetingType": "In-Person",
-                                                        "img": "https://media.licdn.com/dms/image/C4E03AQGLDeTW8C6Ajg/profile-displayphoto-shrink_800_800/0/1642840386229?e=2147483647&v=beta&t=OF2o-d0lwUbpz235zwNrlit75uB2Ya-woNisIo0IAME",
                                                         "profession": "Physiotherapy",
                                                         "name": "Elizabeth Abraham",
+                                                        "img": "https://media.licdn.com/dms/image/C4E03AQGLDeTW8C6Ajg/profile-displayphoto-shrink_800_800/0/1642840386229?e=2147483647&v=beta&t=OF2o-d0lwUbpz235zwNrlit75uB2Ya-woNisIo0IAME",
                                                         "time": "March 7, 9:00 am EST"
                                                     },
                                                     {
@@ -263,8 +269,8 @@
                                                 "clinician": [
                                                     {
                                                         "id": 1,
-                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
                                                         "meetingType": "In-Person",
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
                                                         "profession": "Message Therapy",
                                                         "name": "Conor McIntrye",
                                                         "time": "tomorrow, 3:30pm am EST"
@@ -279,8 +285,8 @@
                                                 "clinician": [
                                                     {
                                                         "id": 2,
-                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
                                                         "meetingType": "In-Person",
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
                                                         "profession": "Physiotherapy",
                                                         "name": "Conor McIntrye",
                                                         "time": "tomorrow, 3:30pm am EST"
@@ -296,18 +302,468 @@
                 }
             ],
             "moreCareService": "More care services",
-            "moreCareServices": [{ "title": "Acupuncture" }, { "title": "Brain Health Assessment" }]
+            "moreCareServices": [
+                {
+                    "title": "Acupuncture",
+                    "location": "Ontario",
+                    "moreCareService": "Acupuncture",
+                    "Image": "https://polyesterstudio.com/wp-content/uploads/2020/08/5-01-768x768.jpg",
+                    "therapyDetails": {
+                        "therapyTitle": "Acupuncture",
+                        "description": "Looking to relive muscle tension and pain? Whether in a recent injury or recurring pain from headaches, back pain or arthritis,massage therapy can help.A lifemark registered Massage Therapist (RMT) will assess your condition and develop a treatment plan using hands-on techniques to help promote the body's natural healing process.",
+                        "booking": { "img": "time-outline", "booking": "Book for later" },
+                        "type": { "img": "person-outline", "type": "In-person" },
+                        "priceDetail": { "img": "card-outline", "priceDetail": "Price Varies" },
+                        "appointmentDetails": [
+                            {
+                                "id": 1,
+                                "title": "Book for later",
+                                "type": "In-Person",
+                                "appointmentDetails": "Book an appointment to talk with someone at a location near your",
+                                "locationDetails": [
+                                    {
+                                        "name": "pt Health-North Brampton",
+                                        "address": "36 vodeen st, stuite 306",
+                                        "distance": 4.1,
+                                        "costDetails": [
+                                            {
+                                                "id": 1,
+                                                "title": "Acupuncture",
+                                                "time": 30,
+                                                "cost": 70.0,
+                                                "clinician": [
+                                                    {
+                                                        "id": 1,
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
+                                                        "meetingType": "In-Person",
+                                                        "profession": "Message Therapy",
+                                                        "name": "Oleg Sharovatov",
+                                                        "time": "March 7, 9:00 am EST"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 2,
+                                                "title": "Acupuncture",
+                                                "time": 45,
+                                                "cost": 82.5,
+                                                "clinician": [
+                                                    {
+                                                        "id": 1,
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
+                                                        "meetingType": "In-Person",
+                                                        "profession": "Message Therapy",
+                                                        "name": "Oleg Sharovatov",
+                                                        "time": "March 7, 9:00 am EST"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 3,
+                                                "title": "Acupuncture",
+                                                "time": 60,
+                                                "cost": 70.0,
+                                                "clinician": [
+                                                    {
+                                                        "id": 1,
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
+                                                        "meetingType": "In-Person",
+                                                        "profession": "Message Therapy",
+                                                        "name": "Oleg Sharovatov",
+                                                        "time": "March 7, 9:00 am EST"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "The Sports Medicine Specialists",
+                                        "address": "247 McMurchy Ave. S",
+                                        "distance": 6.6,
+                                        "costDetails": [
+                                            {
+                                                "id": 1,
+                                                "title": "Acupuncture",
+                                                "time": 30,
+                                                "cost": 70.0,
+                                                "clinician": [
+                                                    {
+                                                        "id": 1,
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
+                                                        "meetingType": "In-Person",
+                                                        "profession": "Message Therapy",
+                                                        "name": "Conor McIntrye",
+                                                        "time": "tomorrow, 3:30pm am EST"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 2,
+                                                "title": "Acupuncture",
+                                                "time": 60,
+                                                "cost": 105.0,
+                                                "clinician": [
+                                                    {
+                                                        "id": 1,
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
+                                                        "meetingType": "In-Person",
+                                                        "profession": "Message Therapy",
+                                                        "name": "Conor McIntrye",
+                                                        "time": "tomorrow, 3:30pm am EST"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Brain Health Assessment",
+                    "location": "Ontario",
+                    "moreCareService": "More care services",
+                    "Image": "https://polyesterstudio.com/wp-content/uploads/2020/08/5-01-768x768.jpg",
+                    "therapyDetails": {
+                        "therapyTitle": "Brain Health Assessment",
+                        "description": "Connect  with a mental health therapist in 12 hours or less. Our therapists can help you with stress, anxiety, depression, grief and more",
+                        "booking": { "img": "time-outline", "booking": "Book for later" },
+                        "type": { "img": "person-outline", "type": "Virtual" },
+                        "priceDetail": { "img": "card-outline", "priceDetail": "Price Varies" },
+                        "appointmentDetails": [
+                            {
+                                "id": 1,
+                                "title": "Book for later",
+                                "type": "Virtual",
+                                "appointmentDetails": "Book an appointment to talk with someone online",
+                                "attendingPerson": "Myself",
+                                "serviceDetails": {
+                                    "title": "Brain Health Assessment",
+                                    "description": "See mental health therapist on Maple by text, video, or audio in under 12 hours. All therapists are Registered Social workers or Registered Psychotherapists and your sessions may be covered.",
+                                    "time": 45,
+                                    "cost": 90.0,
+                                    "type": "Virtual",
+                                    "clinician": [
+                                        {
+                                            "id": 1,
+                                            "img": "https://d1k8hez1mxkuxw.cloudfront.net/external_data/1684918-s10/5540513.jpeg",
+                                            "meetingType": "Virtual",
+                                            "profession": "MSW/RSW",
+                                            "name": "Cassandra Brade",
+                                            "time": "Tomorrow, 9:00 am EST"
+                                        },
+                                        {
+                                            "id": 2,
+                                            "img": "https://d1k8hez1mxkuxw.cloudfront.net/external_data/1684918-s10/5540513.jpeg",
+                                            "meetingType": "Virtual",
+                                            "profession": "MSW, RSW",
+                                            "name": "Melanie Abbott",
+                                            "time": "Tomorrow, 10:00  am EST"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
             "id": 2,
             "location": "Northwest Territories",
             "popular": "Popular",
             "PopularServices": [
-                { "title": "Mental Health Counseling" },
-                { "title": "Nutrition and Food Advice" }
+                {
+                    "title": "Mental Health Counseling",
+                    "location": "Northwest Territories",
+                    "popular": "Popular",
+                    "Image": "https://polyesterstudio.com/wp-content/uploads/2020/08/5-01-768x768.jpg",
+                    "therapyDetails": {
+                        "therapyTitle": "Mental Health Counseling",
+                        "description": "Connect  with a mental health therapist in 12 hours or less. Our therapists can help you with stress, anxiety, depression, grief and more",
+                        "booking": { "img": "time-outline", "booking": "Book for later" },
+                        "type": { "img": "person-outline", "type": "Virtual" },
+                        "priceDetail": { "img": "card-outline", "priceDetail": "Price Varies" },
+                        "appointmentDetails": [
+                            {
+                                "id": 1,
+                                "title": "Meet now",
+                                "type": "Virtual",
+                                "appointmentDetails": "Talk with some online as soon as possible",
+                                "attendingPerson": "Myself",
+                                "serviceDetails": {
+                                    "title": "Mental Health Counseling",
+                                    "description": "See mental health therapist on Maple by text, video, or audio in under 12 hours. All therapists are Registered Social workers or Registered Psychotherapists and your sessions may be covered.",
+                                    "time": 50,
+                                    "cost": 120.0,
+                                    "type": "Virtual"
+                                }
+                            },
+                            {
+                                "id": 2,
+                                "title": "Book for later",
+                                "type": "Virtual",
+                                "appointmentDetails": "Book an appointment to talk with someone online",
+                                "attendingPerson": "Myself",
+                                "serviceDetails": {
+                                    "title": "Mental Health Counseling",
+                                    "description": "See mental health therapist on Maple by text, video, or audio in under 12 hours. All therapists are Registered Social workers or Registered Psychotherapists and your sessions may be covered.",
+                                    "time": 50,
+                                    "cost": 120.0,
+                                    "type": "Virtual",
+                                    "clinician": [
+                                        {
+                                            "id": 1,
+                                            "img": "https://d1k8hez1mxkuxw.cloudfront.net/external_data/1684918-s10/5540513.jpeg",
+                                            "meetingType": "Virtual",
+                                            "profession": "MSW/RSW",
+                                            "name": "Cassandra Brade",
+                                            "time": "Tomorrow, 9:00 am EST"
+                                        },
+                                        {
+                                            "id": 2,
+                                            "img": "https://d1k8hez1mxkuxw.cloudfront.net/external_data/1684918-s10/5540513.jpeg",
+                                            "meetingType": "Virtual",
+                                            "profession": "MSW, RSW",
+                                            "name": "Melanie Abbott",
+                                            "time": "Tomorrow, 10:00  am EST"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Nutrition and Food Advice",
+                    "location": "Northwest Territories",
+                    "popular": "Popular",
+                    "Image": "https://polyesterstudio.com/wp-content/uploads/2020/08/5-01-768x768.jpg",
+                    "therapyDetails": {
+                        "therapyTitle": "Nutrition and Food Advice",
+                        "description": "Connect  with a mental health therapist in 12 hours or less. Our therapists can help you with stress, anxiety, depression, grief and more",
+                        "booking": { "img": "time-outline", "booking": "Book for later" },
+                        "type": { "img": "person-outline", "type": "Virtual" },
+                        "priceDetail": { "img": "card-outline", "priceDetail": "Price Varies" },
+                        "appointmentDetails": [
+                            {
+                                "id": 1,
+                                "title": "Meet now",
+                                "type": "Virtual",
+                                "appointmentDetails": "Talk with some online as soon as possible",
+                                "attendingPerson": "Myself",
+                                "serviceDetails": {
+                                    "title": "Nutrition and Food Advice",
+                                    "description": "See mental health therapist on Maple by text, video, or audio in under 12 hours. All therapists are Registered Social workers or Registered Psychotherapists and your sessions may be covered.",
+                                    "time": 50,
+                                    "cost": 120.0,
+                                    "type": "Virtual"
+                                }
+                            },
+                            {
+                                "id": 2,
+                                "title": "Book for later",
+                                "type": "Virtual",
+                                "appointmentDetails": "Book an appointment to talk with someone online",
+                                "attendingPerson": "Myself",
+                                "serviceDetails": {
+                                    "title": "Nutrition and Food Advice",
+                                    "description": "See mental health therapist on Maple by text, video, or audio in under 12 hours. All therapists are Registered Social workers or Registered Psychotherapists and your sessions may be covered.",
+                                    "time": 50,
+                                    "cost": 120.0,
+                                    "type": "Virtual",
+                                    "clinician": [
+                                        {
+                                            "id": 1,
+                                            "img": "https://d1k8hez1mxkuxw.cloudfront.net/external_data/1684918-s10/5540513.jpeg",
+                                            "meetingType": "Virtual",
+                                            "profession": "MSW/RSW",
+                                            "name": "Cassandra Brade",
+                                            "time": "Tomorrow, 9:00 am EST"
+                                        },
+                                        {
+                                            "id": 2,
+                                            "img": "https://d1k8hez1mxkuxw.cloudfront.net/external_data/1684918-s10/5540513.jpeg",
+                                            "meetingType": "Virtual",
+                                            "profession": "MSW, RSW",
+                                            "name": "Melanie Abbott",
+                                            "time": "Tomorrow, 10:00  am EST"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
             ],
             "moreCareService": "More care services",
-            "moreCareServices": [{ "title": "Acupuncture" }, { "title": "Brain Health Assessment" }]
+            "moreCareServices": [
+                {
+                    "title": "Acupuncture",
+                    "location": "Northwest Territories",
+                    "moreCareService": "Acupuncture",
+                    "Image": "https://polyesterstudio.com/wp-content/uploads/2020/08/5-01-768x768.jpg",
+                    "therapyDetails": {
+                        "therapyTitle": "Acupuncture",
+                        "description": "Looking to relive muscle tension and pain? Whether in a recent injury or recurring pain from headaches, back pain or arthritis,massage therapy can help.A lifemark registered Massage Therapist (RMT) will assess your condition and develop a treatment plan using hands-on techniques to help promote the body's natural healing process.",
+                        "booking": { "img": "time-outline", "booking": "Book for later" },
+                        "type": { "img": "person-outline", "type": "In-person" },
+                        "priceDetail": { "img": "card-outline", "priceDetail": "Price Varies" },
+                        "appointmentDetails": [
+                            {
+                                "id": 1,
+                                "title": "Book for later",
+                                "type": "In-Person",
+                                "appointmentDetails": "Book an appointment to talk with someone at a location near your",
+                                "locationDetails": [
+                                    {
+                                        "name": "pt Health-North Brampton",
+                                        "address": "36 vodeen st, stuite 306",
+                                        "distance": 4.1,
+                                        "costDetails": [
+                                            {
+                                                "id": 1,
+                                                "title": "Acupuncture",
+                                                "time": 30,
+                                                "cost": 70.0,
+                                                "clinician": [
+                                                    {
+                                                        "id": 1,
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
+                                                        "meetingType": "In-Person",
+                                                        "profession": "Message Therapy",
+                                                        "name": "Oleg Sharovatov",
+                                                        "time": "March 7, 9:00 am EST"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 2,
+                                                "title": "Acupuncture",
+                                                "time": 45,
+                                                "cost": 82.5,
+                                                "clinician": [
+                                                    {
+                                                        "id": 1,
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
+                                                        "meetingType": "In-Person",
+                                                        "profession": "Message Therapy",
+                                                        "name": "Oleg Sharovatov",
+                                                        "time": "March 7, 9:00 am EST"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 3,
+                                                "title": "Acupuncture",
+                                                "time": 60,
+                                                "cost": 70.0,
+                                                "clinician": [
+                                                    {
+                                                        "id": 1,
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
+                                                        "meetingType": "In-Person",
+                                                        "profession": "Message Therapy",
+                                                        "name": "Oleg Sharovatov",
+                                                        "time": "March 7, 9:00 am EST"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "The Sports Medicine Specialists",
+                                        "address": "247 McMurchy Ave. S",
+                                        "distance": 6.6,
+                                        "costDetails": [
+                                            {
+                                                "id": 1,
+                                                "title": "Acupuncture",
+                                                "time": 30,
+                                                "cost": 70.0,
+                                                "clinician": [
+                                                    {
+                                                        "id": 1,
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
+                                                        "meetingType": "In-Person",
+                                                        "profession": "Message Therapy",
+                                                        "name": "Conor McIntrye",
+                                                        "time": "tomorrow, 3:30pm am EST"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 2,
+                                                "title": "Acupuncture",
+                                                "time": 60,
+                                                "cost": 105.0,
+                                                "clinician": [
+                                                    {
+                                                        "id": 1,
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
+                                                        "meetingType": "In-Person",
+                                                        "profession": "Message Therapy",
+                                                        "name": "Conor McIntrye",
+                                                        "time": "tomorrow, 3:30pm am EST"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Brain Health Assessment",
+                    "location": "Northwest Territories",
+                    "moreCareService": "More care services",
+                    "Image": "https://polyesterstudio.com/wp-content/uploads/2020/08/5-01-768x768.jpg",
+                    "therapyDetails": {
+                        "therapyTitle": "Brain Health Assessment",
+                        "description": "Connect  with a mental health therapist in 12 hours or less. Our therapists can help you with stress, anxiety, depression, grief and more",
+                        "booking": { "img": "time-outline", "booking": "Book for later" },
+                        "type": { "img": "person-outline", "type": "Virtual" },
+                        "priceDetail": { "img": "card-outline", "priceDetail": "Price Varies" },
+                        "appointmentDetails": [
+                            {
+                                "id": 1,
+                                "title": "Book for later",
+                                "type": "Virtual",
+                                "appointmentDetails": "Book an appointment to talk with someone online",
+                                "attendingPerson": "Myself",
+                                "serviceDetails": {
+                                    "title": "Brain Health Assessment",
+                                    "description": "See mental health therapist on Maple by text, video, or audio in under 12 hours. All therapists are Registered Social workers or Registered Psychotherapists and your sessions may be covered.",
+                                    "time": 45,
+                                    "cost": 90.0,
+                                    "type": "Virtual",
+                                    "clinician": [
+                                        {
+                                            "id": 1,
+                                            "img": "https://d1k8hez1mxkuxw.cloudfront.net/external_data/1684918-s10/5540513.jpeg",
+                                            "meetingType": "Virtual",
+                                            "profession": "MSW/RSW",
+                                            "name": "Cassandra Brade",
+                                            "time": "Tomorrow, 9:00 am EST"
+                                        },
+                                        {
+                                            "id": 2,
+                                            "img": "https://d1k8hez1mxkuxw.cloudfront.net/external_data/1684918-s10/5540513.jpeg",
+                                            "meetingType": "Virtual",
+                                            "profession": "MSW, RSW",
+                                            "name": "Melanie Abbott",
+                                            "time": "Tomorrow, 10:00  am EST"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     ]
 }

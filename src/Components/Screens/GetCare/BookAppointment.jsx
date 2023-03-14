@@ -13,7 +13,7 @@ export default function BookAppointment({ navigation }) {
     const [modalVisible, setModalVisible] = React.useState(false);
     const [chosenOption, setChosenOption] = useState('Ontario');
     const [filterData, setFilterData] = useState([serviceData[0]]);
-    const { setServiceType } = useContext(MainContext);
+    const { setServiceType, serviceType } = useContext(MainContext);
 
     const submitHandler = () => {
         setModalVisible(true);
@@ -24,13 +24,19 @@ export default function BookAppointment({ navigation }) {
             setFilterData(filterItemsArray);
         }
     };
-    const onPress = (title) => {
-        let servicesData = serviceData.map((data) => {
-            let filteredService = data.PopularServices.find((service) => service.title === title);
-            return filteredService;
+    const onPress = (title, location) => {
+        let popularData = serviceData.map((data) => {
+            let filteredPopularData = data.PopularServices.find((service) => service.title === title && service.location === location);
+            let filteredMoreCare = data.moreCareServices.find((service) => service.title === title && service.location === location);
+            if (filteredPopularData !== undefined) {
+                return filteredPopularData
+            }
+            else {
+                return filteredMoreCare
+            }
         });
-        setServiceType(servicesData);
-        navigation.navigate('ServiceTypeDetail');
+        setServiceType(popularData);
+        navigation.navigate('ServiceTypeDetail'); 
     };
     return (
         <View>

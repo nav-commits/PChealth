@@ -14,7 +14,7 @@ export default function ClinicianBooking({ navigation }) {
                 <View>
                     {clinicianVirtual.map((service, idx) => {
                         return (
-                            <View style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', paddingTop: 40 }} key={idx}>
+                          service &&(  <View style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', paddingTop: 40 }} key={idx}>
                                 <Text style={styles.title}>{service?.profession}</Text>
                                 <Image
                                     source={{ uri: service?.img }}
@@ -28,14 +28,14 @@ export default function ClinicianBooking({ navigation }) {
                                 <Text style={styles.title}>{service?.name}</Text>
                                 <Text style={styles.title}>{service?.time}</Text>
                             </View>
-                        );
+                        ));
                     })}
                 </View>
             ) : (
                 <View>
                     {clinicianInPerson.map((service, idx) => {
                         return (
-                            <View style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', paddingTop: 40 }} key={idx}>
+                            service && (<View style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', paddingTop: 40 }} key={idx}>
                                 <Text style={styles.title}>{service?.profession}</Text>
                                 <Image
                                     source={{ uri: service?.img }}
@@ -50,7 +50,7 @@ export default function ClinicianBooking({ navigation }) {
                                 <Text style={styles.title}>{service?.name}</Text>
                                 <Text style={styles.title}>{service?.time}</Text>
                             </View>
-                        );
+                        ));
                     })}
                 </View>
             )}
