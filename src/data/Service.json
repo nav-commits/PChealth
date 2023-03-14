@@ -34,6 +34,7 @@
                                                 "clinician": [
                                                     {
                                                         "id": 1,
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
                                                         "meetingType": "In-Person",
                                                         "profession": "Message Therapy",
                                                         "name": "Oleg Sharovatov",
@@ -49,6 +50,7 @@
                                                 "clinician": [
                                                     {
                                                         "id": 1,
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
                                                         "meetingType": "In-Person",
                                                         "profession": "Message Therapy",
                                                         "name": "Oleg Sharovatov",
@@ -64,6 +66,7 @@
                                                 "clinician": [
                                                     {
                                                         "id": 1,
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
                                                         "meetingType": "In-Person",
                                                         "profession": "Message Therapy",
                                                         "name": "Oleg Sharovatov",
@@ -86,6 +89,7 @@
                                                 "clinician": [
                                                     {
                                                         "id": 1,
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
                                                         "meetingType": "In-Person",
                                                         "profession": "Message Therapy",
                                                         "name": "Conor McIntrye",
@@ -101,6 +105,7 @@
                                                 "clinician": [
                                                     {
                                                         "id": 1,
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
                                                         "meetingType": "In-Person",
                                                         "profession": "Message Therapy",
                                                         "name": "Conor McIntrye",
@@ -135,7 +140,7 @@
                                     "title": "Mental Health Counseling",
                                     "description": "See mental health therapist on Maple by text, video, or audio in under 12 hours. All therapists are Registered Social workers or Registered Psychotherapists and your sessions may be covered.",
                                     "time": 50,
-                                    "cost": 120.00,
+                                    "cost": 120.0,
                                     "type": "Virtual"
                                 }
                             },
@@ -154,6 +159,7 @@
                                     "clinician": [
                                         {
                                             "id": 1,
+                                            "img": "https://d1k8hez1mxkuxw.cloudfront.net/external_data/1684918-s10/5540513.jpeg",
                                             "meetingType": "Virtual",
                                             "profession": "MSW/RSW",
                                             "name": "Cassandra Brade",
@@ -161,6 +167,7 @@
                                         },
                                         {
                                             "id": 2,
+                                            "img": "https://www.pimlicoosteopathy.com/wp-content/uploads/2019/07/Profile-picture-Tania-Mattock-2019-scaled-480x480.jpg",
                                             "meetingType": "Virtual",
                                             "profession": "MSW, RSW",
                                             "name": "Melanie Abbott",
@@ -202,6 +209,7 @@
                                                     {
                                                         "id": 1,
                                                         "meetingType": "In-Person",
+                                                        "img": "https://media.licdn.com/dms/image/C4E03AQGLDeTW8C6Ajg/profile-displayphoto-shrink_800_800/0/1642840386229?e=2147483647&v=beta&t=OF2o-d0lwUbpz235zwNrlit75uB2Ya-woNisIo0IAME",
                                                         "profession": "Physiotherapy",
                                                         "name": "Elizabeth Abraham",
                                                         "time": "March 7, 9:00 am EST"
@@ -209,6 +217,7 @@
                                                     {
                                                         "id": 2,
                                                         "meetingType": "In-Person",
+                                                        "img": "https://painhero.ca/wp-content/uploads/Care-Plus-Physiotherapy-Gaganpreet-Kaur.jpg",
                                                         "profession": "Physiotherapy",
                                                         "name": "Amandeep Sahota",
                                                         "time": "March 8, 11: 45 am EST"
@@ -224,6 +233,7 @@
                                                     {
                                                         "id": 1,
                                                         "meetingType": "In-Person",
+                                                        "img": "https://media.licdn.com/dms/image/C4E03AQGLDeTW8C6Ajg/profile-displayphoto-shrink_800_800/0/1642840386229?e=2147483647&v=beta&t=OF2o-d0lwUbpz235zwNrlit75uB2Ya-woNisIo0IAME",
                                                         "profession": "Physiotherapy",
                                                         "name": "Elizabeth Abraham",
                                                         "time": "March 7, 9:00 am EST"
@@ -231,6 +241,7 @@
                                                     {
                                                         "id": 2,
                                                         "meetingType": "In-Person",
+                                                        "img": "https://painhero.ca/wp-content/uploads/Care-Plus-Physiotherapy-Gaganpreet-Kaur.jpg",
                                                         "profession": "Physiotherapy",
                                                         "name": "Amandeep Sahota",
                                                         "time": "March 8, 11: 45 am EST"
@@ -251,6 +262,9 @@
                                                 "cost": 70.0,
                                                 "clinician": [
                                                     {
+                                                        "id": 1,
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
+                                                        "meetingType": "In-Person",
                                                         "profession": "Message Therapy",
                                                         "name": "Conor McIntrye",
                                                         "time": "tomorrow, 3:30pm am EST"
@@ -264,6 +278,9 @@
                                                 "cost": 105.0,
                                                 "clinician": [
                                                     {
+                                                        "id": 2,
+                                                        "img": "https://images.squarespace-cdn.com/content/v1/58d6fe2759cc68feaa491aa3/1605242646456-VWUHG9W0QO42WYKG3MSV/Stanley+Su%2C+Registered+Massage+Therapist+%28RMT%29",
+                                                        "meetingType": "In-Person",
                                                         "profession": "Physiotherapy",
                                                         "name": "Conor McIntrye",
                                                         "time": "tomorrow, 3:30pm am EST"

@@ -6,8 +6,8 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 export default function ClinicianType({ navigation }) {
     const { foundAppointment, selectedTherapy, setClinicianVirtual, setClinicianInPerson } = useContext(MainContext);
-
     const [chosenOption, setChosenOption] = useState('');
+    
     const selectedVirtual = (selectedItem) => {
         if (selectedItem) {
             const findItem = foundAppointment.map((service) =>
@@ -33,10 +33,10 @@ export default function ClinicianType({ navigation }) {
     };
 
     const onPress = (item) => {
+        navigation.navigate('ClinicianBooking');
         selectedInPerson(item)
         setChosenOption(item);
         selectedVirtual(item);
-        navigation.navigate('ClinicianBooking');
     };
     return (
         <View>
