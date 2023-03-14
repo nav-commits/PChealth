@@ -9,10 +9,12 @@ export default function ServiceTypeDetail({ navigation }) {
     const onPress = () => {
         navigation.navigate('BookingType');
     };
+    console.log(serviceType)
     return (
         <View>
             {serviceType.map((option, idx) => {
                 return (
+                    option && (
                     <View key={idx}>
                         <Image
                             source={{ uri: option?.Image }}
@@ -75,7 +77,7 @@ export default function ServiceTypeDetail({ navigation }) {
                             onPress={onPress}
                         />
                     </View>
-                );
+                ));
             })}
         </View>
     );
