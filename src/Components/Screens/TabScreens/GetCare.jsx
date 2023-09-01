@@ -50,7 +50,7 @@ export default function GetCare({navigation}) {
                         borderRadius={20}
                         marginBottom={30}
                         position={'absolute'}
-                        top={-130}
+                        top={-110}
                         left={20}
                         onPress={submitHandler}
                     />
@@ -80,7 +80,8 @@ const styles = StyleSheet.create({
         marginBottom: 12,
     },
     textContent: {
-        fontSize: 12,
+        fontSize: 10,
         marginRight: 120,
+        width: 140,
     },
 });

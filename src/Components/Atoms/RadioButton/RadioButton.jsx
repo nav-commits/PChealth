@@ -1,6 +1,6 @@
 import { View, TouchableOpacity, StyleSheet } from 'react-native';
 
-export default function RadioButton({ setChosenOption, chosenOption, optionValue, updateSelectedItem }) {
+export default function RadioButton({ setChosenOption, chosenOption, optionValue, updateSelectedItem}) {
     return (
         <TouchableOpacity
             style={styles.radioCircle}

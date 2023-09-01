@@ -10,11 +10,11 @@ import { FormsContext } from '../../../Context/FormsContext';
 
 export default function TellUsAboutYourself({ navigation }) {
     const { inputs, setInputs } = useContext(FormsContext);
-    const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
-    const [date, setDate] = useState('');
+    // const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
+    // const [date, setDate] = useState('');
     const [firstNameError, setFirstNameError] = React.useState('');
     const [lastNameError, setLastNameError] = React.useState('');
-    const [dateError, setDateError] = React.useState('');
+    // const [dateError, setDateError] = React.useState('');
     let progress = 0.33
 
     const changeHandle = (text, input) => {
@@ -37,11 +37,11 @@ export default function TellUsAboutYourself({ navigation }) {
         hideDatePicker();
     };
 
-    const getDate = () => {
-        let tempDate = date.toString().split(' ');
-        let fullDate = `${tempDate[0]} ${tempDate[1]} ${tempDate[2]} ${tempDate[3]}`;
-        return date !== '' ? fullDate : '';
-    };
+    // const getDate = () => {
+    //     let tempDate = date.toString().split(' ');
+    //     let fullDate = `${tempDate[0]} ${tempDate[1]} ${tempDate[2]} ${tempDate[3]}`;
+    //     return date !== '' ? fullDate : '';
+    // };
 
     const updateError = (error, stateUpdater) => {
         stateUpdater(error);
@@ -57,8 +57,8 @@ export default function TellUsAboutYourself({ navigation }) {
         // Last name is there
         if (!inputs.lastName.length > 0) return updateError('LastName Required', setLastNameError);
 
-        // Date
-        if (!date) return updateError('Date Required', setDateError);
+        // // Date
+        // if (!date) return updateError('Date Required', setDateError);
 
         return true;
     };
@@ -116,7 +116,7 @@ export default function TellUsAboutYourself({ navigation }) {
             <TextField onChangeText={(text) => changeHandle(text, 'lastName')} borderRadius={5} />
             {lastNameError ? <Text style={styles.error}>{lastNameError}</Text> : null}
 
-            <Label
+            {/* <Label
                 title='Date of birth'
                 fontWeight={'bold'}
                 paddingLeft={10}
@@ -126,19 +126,19 @@ export default function TellUsAboutYourself({ navigation }) {
             />
             <TouchableOpacity onPress={showDatePicker}>
                 <TextField value={getDate()} borderRadius={5} editable={false} selectTextOnFocus={false} color='black' />
-            </TouchableOpacity>
+            </TouchableOpacity> */}
 
             <Text style={styles.textStyle}>You must be at least 16 years old to proceed</Text>
-            {dateError ? <Text style={styles.error}>{dateError}</Text> : null}
+            {/* {dateError ? <Text style={styles.error}>{dateError}</Text> : null} */}
 
-            <DateTimePickerModal
+            {/* <DateTimePickerModal
                 minimumDate={new Date('1950-01-01')}
                 maximumDate={new Date('2007-12-31')}
                 isVisible={isDatePickerVisible}
                 mode='date'
                 onConfirm={handleConfirm}
                 onCancel={hideDatePicker}
-            />
+            /> */}
             <Button
                 title='Continue & Accept'
                 backgroundColor='hsl(240, 25%, 25%)'
