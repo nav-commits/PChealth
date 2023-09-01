@@ -12,10 +12,9 @@ export default function AccountCreated({ navigation }) {
                 resizeMode={'contain'}
                 source={require('../../../../assets/Account.png')}
                 style={{
-                    width: 410,
-                    height: 290,
-                    borderBottomRightRadius: 80,
-                    borderBottomLeftRadius: 80,
+                    height: 199,
+                    borderBottomRightRadius: 10,
+                    borderBottomLeftRadius: 10,
                 }}
             />
             <Text style={styles.textStyle}>Congratulations! your Account is Created!</Text>

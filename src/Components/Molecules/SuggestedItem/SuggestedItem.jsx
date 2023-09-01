@@ -18,6 +18,7 @@ export default function SuggestedItem({ suggestedItems, onPressHandler }) {
                                 fontWeight: 'bold',
                                 textAlign: 'center',
                                 marginTop: 17,
+                                fontSize: 11.5,
                             }}
                         >
                             {label}
@@ -36,10 +37,10 @@ const styles = StyleSheet.create({
         shadowColor: 0.5,
         shadowOpacity: 0.3,
         shadowRadius: 2,
-        width: 300,
+        width: 320,
         marginBottom: 5,
         height: 53,
-        marginLeft: 50,
+        marginLeft: 20,
         paddingLeft: 12,
         marginTop: 5,
     },
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
         paddingTop: 8,
         position: 'absolute',
         top: 8,
-        left: -15,
+        left: 5,
         zIndex: 2,
     },
     img: {

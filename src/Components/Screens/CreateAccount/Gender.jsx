@@ -5,6 +5,7 @@ import { ProgressBar } from 'react-native-paper';
 import { Picker } from '@react-native-picker/picker';
 import { genderSelect } from '../../../Utils/Labels';
 import Label from '../../Atoms/Label/Label';
+import RadioButton from '../../Atoms/RadioButton/RadioButton';
 
 export default function Gender({ navigation, route }) {
     const [selectedValue, setSelectedValue] = useState('');
@@ -23,6 +24,10 @@ export default function Gender({ navigation, route }) {
         }
     };
 
+    const selectGender = (val) => {
+        console.log(val, 'selected item');
+    };
+
     const isValidForm = () => {
         //check if gender is selected
         if (selectedValue !== '1' && selectedValue !== '2') {
@@ -39,6 +44,8 @@ export default function Gender({ navigation, route }) {
             });
         }
     };
+
+    console.log(selectedValue);
 
     const { progress } = route.params;
     return (
@@ -69,25 +76,31 @@ export default function Gender({ navigation, route }) {
                 size={13}
                 fontWeight={'bold'}
             />
-            <View
-                style={{
-                    marginLeft: 10,
-                    width: 190,
-                    borderWidth: 1,
-                    borderRadius: 10,
-                    color: 'hsl(240, 25%, 25%)',
-                }}
-            >
-                <Picker
+            
+                {/* <Picker
                     selectedValue={selectedValue}
                     onValueChange={handleChangeOption}
-                    style={{ color: 'hsl(240, 25%, 25%)' }}
+                    style={{ color: 'hsl(240, 25%, 25%)', padding:'10px' }}
                 >
                     {genderSelect.map((label, i) => (
                         <Picker.Item label={label.label} value={label.value} key={i} />
                     ))}
-                </Picker>
-            </View>
+                </Picker> */}
+
+                {genderSelect.map((label, i) => (
+                    <View style={{marginLeft:'20px', marginTop:'10px', paddingTop:'10px'}} key={i}>
+                        <View style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
+                            <RadioButton
+                                optionValue={label.value}
+                                setChosenOption={handleChangeOption}
+                                chosenOption={selectedValue}
+                                updateSelectedItem={selectGender}
+                            />
+                            <Text >{label.label}</Text>
+                        </View>
+                    </View>           
+                ))}
+
             {genderError ? <Text style={styles.error}>{genderError}</Text> : null}
             <View style={{ padding: 10 }}>
                 <Button

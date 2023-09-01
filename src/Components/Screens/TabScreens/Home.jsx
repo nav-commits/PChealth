@@ -106,5 +106,6 @@ export default function Home() {
 const styles = StyleSheet.create({
     contentContainer: {
         paddingVertical: 20,
+        paddingTop: 0,
     },
 });
